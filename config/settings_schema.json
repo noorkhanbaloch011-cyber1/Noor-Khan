@@ -1,0 +1,134 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Glowérive Natural Skincare",
+    "theme_version": "1.0.0",
+    "theme_author": "Glowérive Dev Team",
+    "theme_documentation_url": "https://github.com",
+    "theme_support_url": "https://github.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary Brand Colors"
+      },
+      {
+        "type": "color",
+        "id": "color_teal",
+        "label": "Primary Deep Teal",
+        "default": "#0e4643"
+      },
+      {
+        "type": "color",
+        "id": "color_dark_teal",
+        "label": "Dark Teal Accent",
+        "default": "#093634"
+      },
+      {
+        "type": "color",
+        "id": "color_accent_teal",
+        "label": "Light Accent Teal",
+        "default": "#1b635e"
+      },
+      {
+        "type": "color",
+        "id": "color_mint",
+        "label": "Mint Background Tint",
+        "default": "#e6f3f0"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_soft",
+        "label": "Page Body Background",
+        "default": "#f7fbf9"
+      },
+      {
+        "type": "color",
+        "id": "color_gold",
+        "label": "Warm Gold Accent",
+        "default": "#d4a373"
+      },
+      {
+        "type": "color",
+        "id": "color_text_primary",
+        "label": "Primary Text Color",
+        "default": "#2b3938"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font Families"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "playfair_display_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "plus_jakarta_sans_n4"
+      }
+    ]
+  },
+  {
+    "name": "Cart Drawer & Shipping",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_type",
+        "label": "Cart Type",
+        "options": [
+          { "value": "drawer", "label": "Slide-out Drawer" },
+          { "value": "page", "label": "Page" }
+        ],
+        "default": "drawer"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Threshold ($)",
+        "default": 50
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_notice",
+        "label": "Free Shipping Notice",
+        "default": "Free Shipping on Orders Over $50"
+      }
+    ]
+  },
+  {
+    "name": "Social Media Links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest",
+        "label": "Pinterest URL"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok",
+        "label": "TikTok URL"
+      }
+    ]
+  }
+]

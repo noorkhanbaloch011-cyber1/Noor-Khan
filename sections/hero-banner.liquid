@@ -1,0 +1,145 @@
+<!-- Hero Banner Section -->
+<section class="relative bg-gradient-to-r from-[#0d4541] via-[#1b5e58] to-[#2c7771] text-white overflow-hidden pb-20 md:pb-24" data-purpose="hero-banner">
+  <!-- Background Ambient Glow Overlay -->
+  <div class="absolute inset-0 glow-overlay pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- Hero Text Content -->
+    <div class="lg:col-span-6 space-y-6 text-left">
+      <div class="inline-flex items-center space-x-2 text-teal-300 tracking-[0.25em] text-xs font-bold uppercase">
+        <i class="fa-solid fa-leaf text-teal-400"></i>
+        <span>{{ section.settings.eyebrow | default: 'Naturally Radiant' }}</span>
+      </div>
+
+      <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] text-white">
+        {{ section.settings.heading_line1 | default: 'Skincare' }} <br/>
+        {{ section.settings.heading_line2 | default: 'that cares,' }} <br/>
+        {{ section.settings.heading_line3 | default: 'beauty that' }} <br/>
+        <span class="italic font-playfair font-medium text-teal-200">{{ section.settings.heading_italic | default: 'shines.' }}</span>
+      </h1>
+
+      <p class="text-teal-100/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
+        {{ section.settings.subheading | default: 'Discover the perfect blend of nature and science for healthy, glowing skin every day.' }}
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="pt-4 flex flex-wrap items-center gap-4">
+        <a class="inline-flex items-center space-x-3 bg-[#0a3532] hover:bg-[#072725] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-teal-500/40 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="{{ section.settings.btn_link | default: '#featured-products' }}">
+          <span>{{ section.settings.btn_label | default: 'Shop Now' }}</span>
+          <i class="fa-solid fa-arrow-right-long text-sm"></i>
+        </a>
+
+        {%- if section.settings.show_video_btn -%}
+          <button type="button" class="inline-flex items-center space-x-3 text-white hover:text-teal-200 px-4 py-3 rounded-full text-xs font-semibold tracking-wider uppercase group transition" onclick="openVideoModal()">
+            <span class="w-8 h-8 rounded-full border border-teal-300/50 flex items-center justify-center group-hover:border-white transition">
+              <i class="fa-solid fa-play text-[10px] ml-0.5 text-teal-200 group-hover:text-white"></i>
+            </span>
+            <span>{{ section.settings.video_btn_label | default: 'Watch Video' }}</span>
+          </button>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- Hero Skincare Model Image Representation -->
+    <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-lg">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/20">
+          {%- if section.settings.hero_image != blank -%}
+            <img 
+              alt="{{ section.settings.hero_image.alt | default: 'Radiant skincare model showcasing healthy glowing skin' | escape }}" 
+              class="w-full h-[460px] sm:h-[540px] object-cover object-center" 
+              src="{{ section.settings.hero_image | image_url: width: 1200 }}" 
+              loading="eager"
+            />
+          {%- else -%}
+            <img 
+              alt="Radiant skincare model showcasing healthy glowing skin with botanical water splashes" 
+              class="w-full h-[460px] sm:h-[540px] object-cover object-center" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBidVnZgeOyVsiB1AAhsA2ASW2LfrNev5YVj_JZO1_VjehLdfVeaSk-qGORNan29tmqoyf0zQa-_d-O3QGHtyJrtqwSsGnv8E2uGze3No6vFQjPupqngQPxBMnUoEhqx85Cb9WX3Z7zmGhgmWF7V81BlwlQTHuqAfPKWG_HR4tAysO28EztkUt0RZe_Ud7RkV-mS62hSCER-JMAIrv_1M7n4W-af2i6zmnF9hTvRFTiIWrAimrJ27pONg" 
+              loading="eager"
+            />
+          {%- endif -%}
+          <!-- Ambient mint leaf accent overlay simulation -->
+          <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "Naturally Radiant"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Heading Line 1",
+      "default": "Skincare"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Heading Line 2",
+      "default": "that cares,"
+    },
+    {
+      "type": "text",
+      "id": "heading_line3",
+      "label": "Heading Line 3",
+      "default": "beauty that"
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading Italic Word",
+      "default": "shines."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover the perfect blend of nature and science for healthy, glowing skin every day."
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_video_btn",
+      "label": "Show Watch Video Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "video_btn_label",
+      "label": "Video Button Label",
+      "default": "Watch Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}

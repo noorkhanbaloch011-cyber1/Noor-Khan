@@ -1,0 +1,16 @@
+<!-- Main Standard Page Section -->
+<section class="py-12 max-w-4xl mx-auto px-4 sm:px-8" data-purpose="main-page">
+  <h1 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-6">
+    {{ page.title | default: 'About Glowérive Natural Skincare' }}
+  </h1>
+  <div class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
+    {{ page.content | default: '<p>At Glowérive, our philosophy is grounded in honoring the intelligence of nature while elevating botanical efficacy with modern dermatological science. We formulate gentle, restorative, and non-toxic skincare designed to bring out your skin’s innate luminosity.</p>' }}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page Content",
+  "settings": []
+}
+{% endschema %}

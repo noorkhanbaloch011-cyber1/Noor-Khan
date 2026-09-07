@@ -1,0 +1,43 @@
+{% comment %}
+  Slide-out AJAX Cart Drawer Snippet
+{% endcomment %}
+
+<div id="cart-drawer-overlay" class="cart-drawer-overlay" onclick="closeCart()"></div>
+
+<aside id="cart-drawer" class="cart-drawer" aria-label="Shopping Bag">
+  <div class="cart-drawer__header">
+    <h3>
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>{{ 'cart.title' | t | default: 'Your Bag' }}</span>
+    </h3>
+    <button type="button" id="cart-drawer-close" class="cart-drawer__close" aria-label="Close Cart" onclick="closeCart()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <div class="free-shipping-bar">
+    <div id="free-shipping-text" class="free-shipping-text">
+      Add <strong>$16.00</strong> more to unlock <strong>Free Shipping</strong>!
+    </div>
+    <div class="progress-track">
+      <div id="free-shipping-bar" class="progress-fill" style="width: 68%;"></div>
+    </div>
+  </div>
+
+  <div id="cart-items-container" class="cart-drawer__body">
+    <!-- Populated dynamically by theme.js -->
+  </div>
+
+  <div class="cart-drawer__footer">
+    <div class="cart-subtotal-row">
+      <span>{{ 'cart.subtotal' | t | default: 'Subtotal' }}</span>
+      <span id="cart-subtotal-price">$76.00</span>
+    </div>
+    <p class="cart-subtotal-note">
+      {{ 'cart.taxes_and_shipping_policy_at_checkout_html' | t | default: 'Taxes and shipping calculated at checkout' }}
+    </p>
+    <a href="/checkout" class="btn-checkout">
+      {{ 'cart.checkout' | t | default: 'Proceed to Checkout' }}
+    </a>
+  </div>
+</aside>

@@ -1,0 +1,154 @@
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "settings": {
+        "eyebrow": "Naturally Radiant",
+        "heading_line1": "Skincare",
+        "heading_line2": "that cares,",
+        "heading_line3": "beauty that",
+        "heading_italic": "shines.",
+        "subheading": "Discover the perfect blend of nature and science for healthy, glowing skin every day.",
+        "btn_label": "Shop Now",
+        "btn_link": "#featured-products",
+        "show_video_btn": true,
+        "video_btn_label": "Watch Video"
+      }
+    },
+    "value_props": {
+      "type": "value-props",
+      "blocks": {
+        "prop_1": {
+          "type": "prop",
+          "settings": {
+            "icon": "leaf",
+            "title": "Natural Ingredients",
+            "subtitle": "Safe & Effective"
+          }
+        },
+        "prop_2": {
+          "type": "prop",
+          "settings": {
+            "icon": "flask",
+            "title": "Dermatologist Tested",
+            "subtitle": "For All Skin Types"
+          }
+        },
+        "prop_3": {
+          "type": "prop",
+          "settings": {
+            "icon": "droplet",
+            "title": "Paraben & Sulfate Free",
+            "subtitle": "Clean & Gentle"
+          }
+        },
+        "prop_4": {
+          "type": "prop",
+          "settings": {
+            "icon": "heart",
+            "title": "Cruelty Free",
+            "subtitle": "Never Tested on Animals"
+          }
+        }
+      },
+      "block_order": ["prop_1", "prop_2", "prop_3", "prop_4"],
+      "settings": {}
+    },
+    "category_grid": {
+      "type": "category-grid",
+      "blocks": {
+        "cat_1": {
+          "type": "category",
+          "settings": {
+            "title": "Serums",
+            "link": "#category-serums",
+            "fallback_image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBcWiL9l1lYUyGNWQiHoox8caFjvCDsNS80Fq574H1GqyUPcqlkdsvv2I6Ch_Gm5mDxywgEbXhtAVAd8sQQthSRqrMIDl5B2hA3Q6CS9oBC_KOhCORxu3pwkDaw_zh9Sp8MwjdTiYHr0nsiTVzxCbS8NzBwiRcVojZ-YL_K7tVYGlX16x1kkP4UsRVVhaqidMK1puUZTcSab4c-uR5CkA4Xt6IyyZgSZQvzeTjvKFYva0IYQUiy2fL3lw"
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "title": "Moisturizers",
+            "link": "#category-moisturizers",
+            "fallback_image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuB6DuL_vNcZjV6655Xtf6PQ49rJae0easENf8pl7ErOaLoB6VAemQ7aTmE-DbW8DoxPSxcRA7X1sY3q8naPSq2DxnxKE648Um50WkeSQwrq2o-4p6gb3LRxebrQ6taYJJ8QfTByH5R9kwlTZXXMUTvOF6-8VWCu5TgQz8Ieo-UjJy_LFIGmP6Q0Vs1TkArSLyHdFL1JUn9PtD7Gilssd77Or1NOALyBpvAxr8HY9kx7o_AVKUIS2sxH9A"
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "title": "Cleansers",
+            "link": "#category-cleansers",
+            "fallback_image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA9Q6EKwGCCBoGf_M7w3DScThFyTCQ4BiltZETVjuBeOw8INfyeXE5DGpWGS-16BVFQzNaBEJYhWnwY-3mf-uPV-E0MLfAw79rpdwzpuUJg8zhOCsBGXKjpHT22sD7gjsZqK1gOD-Iy-pp0ehOPZpHGk0-NBZOF9dqORRNx0vIgLdqn5XV2RDELUtA69sGcEqhmV9HnJ6eNf8824FsYT1o8hZvtHMFVIE41UAmWPoKn-KsxzhIr3GpX4A"
+          }
+        },
+        "cat_4": {
+          "type": "category",
+          "settings": {
+            "title": "Toners",
+            "link": "#category-toners",
+            "fallback_image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3fw8c2SWUYJWL_h6uIKWE61-ZODfH2vb42M1qswdXs4kLjX0glNR4qeyPRs-CVoFFV_N8VPkGBhksQL-CFNCikcPctr9ekOwFU95Oq5QngbwPxBUJqPumDrYgP7DNwp5qRxEPDUnV40NQmc804yL-xptbxZbZl_CSX6D0AL1sitrOyE7Eo7u_tombpR_T2HDyJ8EEdT5RAS0IKgEm7tnzw5LnqHaAJwbnHv1ohue34WONGiJotnQZg"
+          }
+        },
+        "cat_5": {
+          "type": "category",
+          "settings": {
+            "title": "Eye Care",
+            "link": "#category-eyecare",
+            "fallback_image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDDJN2wVdLq7SQpihPuTuZzrwKPFltF4dOigoKJwo3cagyQuUqVCPeK6WzzR3uGRIUIHyF75KQL_TJOOX4_cjbIt9Mp_CYPhRtO-oGKD_-7xEcfT1r_oantBo7ATtBYg5JC6DIDURcVr5TH95cYMgIYW_sZcGeMRdDBcSuNHjwMXpdFF6hKe9yV1CEvuAE91u15DeQvxOsnlnH4hj8SSL_uLXkPcqghdmP8PeOEVEAhw1EcU2eMmYwOhA"
+          }
+        },
+        "cat_6": {
+          "type": "category",
+          "settings": {
+            "title": "Sun Care",
+            "link": "#category-suncare",
+            "fallback_image_url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAkqsQuUhoM_laI0u51NEEY2QTpfUKH7nxGuUcVAOPvBImBTpl5Jg0wh1OGj3PcLfVJ5fVOzZgTjaTUenUyGaZQi_RP7tt6025GEtIMZO3ScWgzaawIzMM25FeWYu-E2O6-rswdBWXz0YeCsbsKG5LX28oYK6vBWF9HOCeLFe1jZhpaE8BvZN05J962AqDraD2Pk3nVQ-zDhfpJQmS2nCAtRokav-x1_UyRzY1wJGGaIOLXHrtU9tqMxw"
+          }
+        }
+      },
+      "block_order": ["cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6"],
+      "settings": {
+        "heading": "Shop by Category"
+      }
+    },
+    "featured_products": {
+      "type": "featured-products",
+      "settings": {
+        "heading": "Featured Products",
+        "products_to_show": 4,
+        "view_all_link": "#featured-products"
+      }
+    },
+    "promo_banner": {
+      "type": "promo-club-banner",
+      "settings": {
+        "eyebrow": "Special Offer",
+        "title": "Get 20% Off<br/>Your First Order",
+        "subtitle": "Join our glow club & unlock exclusive offers and skincare tips.",
+        "form_title": "Join Now",
+        "form_text": "Be the first to know about new arrivals & exclusive deals."
+      }
+    },
+    "trust_badges": {
+      "type": "trust-badges",
+      "settings": {
+        "title_1": "Free Shipping",
+        "text_1": "On orders over $50",
+        "title_2": "Secure Payment",
+        "text_2": "100% safe & secure",
+        "title_3": "Easy Returns",
+        "text_3": "30 days return policy",
+        "title_4": "Customer Support",
+        "text_4": "We're here to help"
+      }
+    }
+  },
+  "order": [
+    "hero_banner",
+    "value_props",
+    "category_grid",
+    "featured_products",
+    "promo_banner",
+    "trust_badges"
+  ]
+}

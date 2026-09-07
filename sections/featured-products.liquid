@@ -1,0 +1,102 @@
+<!-- Featured Products Section -->
+<section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="featured-products-grid" id="featured-products">
+  <!-- Section Header with Title and 'View All' CTA -->
+  <div class="flex items-center justify-between mb-8">
+    <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-[#0e4643] flex items-center gap-3">
+      {{ section.settings.heading | default: 'Featured Products' }}
+      <span class="h-[1px] w-12 bg-slate-300 inline-block"></span>
+    </h2>
+    <a class="text-xs font-bold tracking-widest text-[#0e4643] hover:text-teal-600 border border-[#0e4643]/30 px-4 py-2 rounded-full uppercase transition" href="{{ section.settings.view_all_link | default: '/collections/all' }}">
+      {{ 'general.view_all' | t | default: 'View All' }}
+    </a>
+  </div>
+
+  <!-- 4-Column Product Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {%- assign target_collection = collections[section.settings.collection] -%}
+    {%- if target_collection != blank and target_collection.products_count > 0 -%}
+      {%- for product in target_collection.products limit: section.settings.products_to_show -%}
+        {% render 'product-card', product: product %}
+      {%- endfor -%}
+    {%- else -%}
+      <!-- Product 1: Best Seller - Hydra Glow Gel Cream -->
+      {% render 'product-card',
+        badge_text: 'Best Seller',
+        title: 'Hydra Glow Gel Cream',
+        price: 3400,
+        rating: 5,
+        reviews_count: 245,
+        image_url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA'
+      %}
+
+      <!-- Product 2: New - Radiance Boost Serum -->
+      {% render 'product-card',
+        badge_text: 'New',
+        title: 'Radiance Boost Serum',
+        price: 4200,
+        rating: 5,
+        reviews_count: 189,
+        image_url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDa5aB2COJAeOvOLGaZOry1CD5mRizrITc_qdwIGqDU-C6qec2dGL46k-CRKXWx9qRaAY93KhXeISPD5OrVZ7byUp_KUFHW5Q6EJmeyR1UmlIL_cfDjDcSMby568yeJXfy3DGKr8zVEVXn7vhPgwx_hr_nGYiHD8Kg4lG9ULWbmy1ed009fgTjeziwtSIkBezbCnE176ZGDTdzjcU0DYb0lJO9MwW7HnsUD8GsHqOgAywTrOF6WaNkvDQ'
+      %}
+
+      <!-- Product 3: Limited - Nourishing Night Restorative Cream -->
+      {% render 'product-card',
+        badge_text: 'Limited',
+        title: 'Nourishing Night Restorative Cream',
+        price: 3800,
+        rating: 5,
+        reviews_count: 312,
+        image_url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCuCD2lYIUuSUMWLcySxeU4pbit6lg5chvOGwU_rrqMRE9fowbDMx9r74rqAeZepksQOfmGs-G3wmwx5tq2MpdIGlYlOzSxxob3oLj3pF7B2-zsAG-2rjT1cnhwMljMyutu2Mmqw16q5zfkHzqvjc7z4VSdpawxF0YtmeeYiAe8EsdL9ukTFA4NZeJSumnYuvDtZHIC7nTKS7U-qQkQ8wrYCL9626Rk0tMkQGBfAiibFdrr305ZtF74nQ'
+      %}
+
+      <!-- Product 4: Sale - Daily UV Defense Sunscreen SPF 50 -->
+      {% render 'product-card',
+        badge_text: 'Sale',
+        title: 'Daily UV Defense Sunscreen SPF 50',
+        price: 2400,
+        compare_price: 3000,
+        rating: 4.5,
+        reviews_count: 156,
+        image_url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJDUNyiqhoYH4fLrSG_VlyHbhUVR8xp4w3cb6lMdj6GV5F1iLP1UnQ_8pUwl0sdJ8Xp2R8T6lMVmVE-A1dMN7w8zQpgti7apxbq1BrgXLi8-yC9022Q4KLSb8YXboB_51Ih344xqkuGQKViWqDNe5AsvLnt0f3Y_kpIOaiqGd8e1h-4bjoCR70VlemWmUA5Y5Mp4zqYHCSGvnRA9lrMwuT3QVID5d1h9xXGF3ek82L_OgqeGJQ-iFInw'
+      %}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured Products"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 4,
+      "default": 4,
+      "label": "Products to show"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View All Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}

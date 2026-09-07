@@ -1,0 +1,118 @@
+<!-- Value Proposition Floating Bar -->
+<div class="relative z-20 max-w-6xl mx-auto px-4 -mt-16 mb-8" data-purpose="value-props">
+  <div class="bg-white rounded-2xl shadow-xl border border-gray-100/80 p-6 md:p-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3 first:pt-0" {{ block.shopify_attributes }}>
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+              {%- case block.settings.icon -%}
+                {%- when 'leaf' -%}
+                  <i class="fa-solid fa-leaf text-xl text-[#0e4643]"></i>
+                {%- when 'flask' -%}
+                  <i class="fa-solid fa-flask-vial text-xl text-[#0e4643]"></i>
+                {%- when 'droplet' -%}
+                  <i class="fa-solid fa-droplet text-xl text-[#0e4643]"></i>
+                {%- when 'heart' -%}
+                  <i class="fa-solid fa-heart text-xl text-[#0e4643]"></i>
+                {%- else -%}
+                  <i class="fa-solid fa-check text-xl text-[#0e4643]"></i>
+              {%- endcase -%}
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">{{ block.settings.title }}</h4>
+              <p class="text-[11px] text-slate-500 font-medium mt-0.5">{{ block.settings.subtitle }}</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Default Fallback Props -->
+        <div class="flex items-center space-x-3.5 pt-2 md:pt-0 md:px-3 first:pt-0">
+          <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-leaf text-xl text-[#0e4643]"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Natural Ingredients</h4>
+            <p class="text-[11px] text-slate-500 font-medium mt-0.5">Safe & Effective</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
+          <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-flask-vial text-xl text-[#0e4643]"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Dermatologist Tested</h4>
+            <p class="text-[11px] text-slate-500 font-medium mt-0.5">For All Skin Types</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
+          <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-droplet text-xl text-[#0e4643]"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Paraben & Sulfate Free</h4>
+            <p class="text-[11px] text-slate-500 font-medium mt-0.5">Clean & Gentle</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
+          <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-heart text-xl text-[#0e4643]"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Cruelty Free</h4>
+            <p class="text-[11px] text-slate-500 font-medium mt-0.5">Never Tested on Animals</p>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Value Propositions",
+  "blocks": [
+    {
+      "type": "prop",
+      "name": "Feature Prop",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "leaf", "label": "Leaf (Natural)" },
+            { "value": "flask", "label": "Flask (Tested)" },
+            { "value": "droplet", "label": "Droplet (Clean)" },
+            { "value": "heart", "label": "Heart (Cruelty Free)" }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Natural Ingredients"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Safe & Effective"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Value Propositions",
+      "blocks": [
+        { "type": "prop", "settings": { "icon": "leaf", "title": "Natural Ingredients", "subtitle": "Safe & Effective" } },
+        { "type": "prop", "settings": { "icon": "flask", "title": "Dermatologist Tested", "subtitle": "For All Skin Types" } },
+        { "type": "prop", "settings": { "icon": "droplet", "title": "Paraben & Sulfate Free", "subtitle": "Clean & Gentle" } },
+        { "type": "prop", "settings": { "icon": "heart", "title": "Cruelty Free", "subtitle": "Never Tested on Animals" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

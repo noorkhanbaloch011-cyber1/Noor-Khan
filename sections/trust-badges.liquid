@@ -1,0 +1,125 @@
+<!-- Trust Badges Section -->
+<section class="border-t border-slate-200/80 bg-white py-8 mt-6" data-purpose="trust-badges">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <!-- Trust 1: Free Shipping -->
+    <div class="flex items-center space-x-3">
+      <div class="text-[#0e4643] text-2xl">
+        <i class="fa-solid fa-truck"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">
+          {{ section.settings.title_1 | default: 'Free Shipping' }}
+        </h4>
+        <p class="text-[11px] text-slate-500 font-medium">
+          {{ section.settings.text_1 | default: 'On orders over $50' }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Trust 2: Secure Payment -->
+    <div class="flex items-center space-x-3">
+      <div class="text-[#0e4643] text-2xl">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">
+          {{ section.settings.title_2 | default: 'Secure Payment' }}
+        </h4>
+        <p class="text-[11px] text-slate-500 font-medium">
+          {{ section.settings.text_2 | default: '100% safe & secure' }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Trust 3: Easy Returns -->
+    <div class="flex items-center space-x-3">
+      <div class="text-[#0e4643] text-2xl">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">
+          {{ section.settings.title_3 | default: 'Easy Returns' }}
+        </h4>
+        <p class="text-[11px] text-slate-500 font-medium">
+          {{ section.settings.text_3 | default: '30 days return policy' }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Trust 4: Customer Support -->
+    <div class="flex items-center space-x-3">
+      <div class="text-[#0e4643] text-2xl">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">
+          {{ section.settings.title_4 | default: 'Customer Support' }}
+        </h4>
+        <p class="text-[11px] text-slate-500 font-medium">
+          {{ section.settings.text_4 | default: "We're here to help" }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Trust Badges",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Badge 1 Title",
+      "default": "Free Shipping"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Badge 1 Text",
+      "default": "On orders over $50"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Badge 2 Title",
+      "default": "Secure Payment"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Badge 2 Text",
+      "default": "100% safe & secure"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Badge 3 Title",
+      "default": "Easy Returns"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Badge 3 Text",
+      "default": "30 days return policy"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Badge 4 Title",
+      "default": "Customer Support"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Badge 4 Text",
+      "default": "We're here to help"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Badges"
+    }
+  ]
+}
+{% endschema %}

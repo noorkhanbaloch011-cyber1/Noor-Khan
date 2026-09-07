@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Glowérive Natural Skincare | Skincare That Cares, Beauty That Shines (Interactive Theme Preview)</title>
+  <meta content="Discover the perfect blend of nature and science for healthy, glowing skin with Glowérive Natural Skincare products. Safe, gentle, dermatologist-tested." name="description"/>
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#0e4643',
+              darkTeal: '#093634',
+              accentTeal: '#1b635e',
+              mint: '#e6f3f0',
+              softBg: '#f7fbf9',
+              gold: '#d4a373',
+              cream: '#fbf9f6'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Theme Stylesheet -->
+  <link rel="stylesheet" href="../assets/base.css">
+</head>
+<body class="bg-[#f7fbf9] text-slate-800 antialiased selection:bg-[#1b635e] selection:text-white">
+
+  <!-- BEGIN: TopAnnouncementBar -->
+  <div class="bg-[#093634] text-teal-100 text-xs py-2 px-4 sm:px-8 border-b border-[#144c48]" data-purpose="top-announcement-bar">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-2 font-medium">
+        <i class="fa-solid fa-truck-fast text-teal-300"></i>
+        <span>Free Shipping on Orders Over $50</span>
+      </div>
+      <div class="flex items-center space-x-6 text-[11px] tracking-wide text-teal-200">
+        <a class="hover:text-white transition" href="#track-order">Track Order</a>
+        <span class="text-teal-600">|</span>
+        <a class="hover:text-white transition" href="#faq">FAQ</a>
+        <span class="text-teal-600">|</span>
+        <a class="hover:text-white transition" href="#store-locator">Store Locator</a>
+        <span class="text-teal-600">|</span>
+        <a class="hover:text-white transition" href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <!-- END: TopAnnouncementBar -->
+
+  <!-- BEGIN: MainHeader -->
+  <header class="bg-[#0e4643] text-white sticky top-0 z-50 shadow-md" data-purpose="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      <!-- Mobile Hamburger Toggle -->
+      <div class="flex items-center md:hidden">
+        <button type="button" class="text-teal-100 hover:text-white p-2" aria-label="Open Navigation Menu" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Brand Logo -->
+      <a class="flex items-center space-x-3 group" data-purpose="brand-logo" href="#">
+        <div class="w-10 h-10 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#15534f] text-teal-200 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-spa text-xl"></i>
+        </div>
+        <div>
+          <span class="font-playfair text-2xl font-bold tracking-wider text-white block leading-none">Glowérive</span>
+          <span class="text-[9px] tracking-[0.25em] text-teal-300 font-semibold uppercase block mt-1">Natural Skincare</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-teal-100" data-purpose="desktop-nav">
+        <a class="text-white border-b-2 border-teal-300 pb-1 font-bold" href="#">HOME</a>
+        <a class="hover:text-teal-300 transition" href="#featured-products">SHOP</a>
+        <a class="hover:text-teal-300 transition" href="#shop">COLLECTIONS</a>
+        <a class="hover:text-teal-300 transition" href="#ingredients">INGREDIENTS</a>
+        <a class="hover:text-teal-300 transition" href="#about">ABOUT US</a>
+        <a class="hover:text-teal-300 transition" href="#blog">BLOG</a>
+      </nav>
+
+      <!-- Action Icons (Search, Profile, Cart with Badge) -->
+      <div class="flex items-center space-x-5 text-teal-100">
+        <button type="button" aria-label="Search" class="hover:text-white transition p-1 text-base" onclick="showToast('Search functionality initialized')">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button type="button" aria-label="Account" class="hover:text-white transition p-1 text-base" onclick="showToast('Customer account area ready')">
+          <i class="fa-regular fa-user"></i>
+        </button>
+        <button type="button" aria-label="Shopping Cart" class="hover:text-white transition p-1 relative text-base" data-cart-trigger>
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge absolute -top-1.5 -right-2 bg-teal-300 text-[#093634] font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+
+  <main>
+    <!-- BEGIN: HeroSection -->
+    <section class="relative bg-gradient-to-r from-[#0d4541] via-[#1b5e58] to-[#2c7771] text-white overflow-hidden pb-20 md:pb-24" data-purpose="hero-banner">
+      <!-- Background Ambient Glow Overlay -->
+      <div class="absolute inset-0 glow-overlay pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-6 space-y-6 text-left">
+          <div class="inline-flex items-center space-x-2 text-teal-300 tracking-[0.25em] text-xs font-bold uppercase">
+            <i class="fa-solid fa-leaf text-teal-400"></i>
+            <span>Naturally Radiant</span>
+          </div>
+          <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] text-white">
+            Skincare <br/>
+            that cares, <br/>
+            beauty that <br/>
+            <span class="italic font-playfair font-medium text-teal-200">shines.</span>
+          </h1>
+          <p class="text-teal-100/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
+            Discover the perfect blend of nature and science for healthy, glowing skin every day.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a class="inline-flex items-center space-x-3 bg-[#0a3532] hover:bg-[#072725] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-teal-500/40 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="#featured-products">
+              <span>Shop Now</span>
+              <i class="fa-solid fa-arrow-right-long text-sm"></i>
+            </a>
+            <button type="button" class="inline-flex items-center space-x-3 text-white hover:text-teal-200 px-4 py-3 rounded-full text-xs font-semibold tracking-wider uppercase group transition" onclick="openVideoModal()">
+              <span class="w-8 h-8 rounded-full border border-teal-300/50 flex items-center justify-center group-hover:border-white transition">
+                <i class="fa-solid fa-play text-[10px] ml-0.5 text-teal-200 group-hover:text-white"></i>
+              </span>
+              <span>Watch Video</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Skincare Model Image -->
+        <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-lg">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/20">
+              <img alt="Radiant skincare model showcasing healthy glowing skin with botanical water splashes" class="w-full h-[460px] sm:h-[540px] object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBidVnZgeOyVsiB1AAhsA2ASW2LfrNev5YVj_JZO1_VjehLdfVeaSk-qGORNan29tmqoyf0zQa-_d-O3QGHtyJrtqwSsGnv8E2uGze3No6vFQjPupqngQPxBMnUoEhqx85Cb9WX3Z7zmGhgmWF7V81BlwlQTHuqAfPKWG_HR4tAysO28EztkUt0RZe_Ud7RkV-mS62hSCER-JMAIrv_1M7n4W-af2i6zmnF9hTvRFTiIWrAimrJ27pONg"/>
+              <!-- Ambient mint leaf accent overlay simulation -->
+              <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+
+    <!-- BEGIN: ValuePropositionBar -->
+    <div class="relative z-20 max-w-6xl mx-auto px-4 -mt-16 mb-8" data-purpose="value-props">
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-100/80 p-6 md:p-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+          <!-- Prop 1: Natural Ingredients -->
+          <div class="flex items-center space-x-3.5 pt-2 md:pt-0 md:px-3 first:pt-0">
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-leaf text-xl text-[#0e4643]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Natural Ingredients</h4>
+              <p class="text-[11px] text-slate-500 font-medium mt-0.5">Safe & Effective</p>
+            </div>
+          </div>
+
+          <!-- Prop 2: Dermatologist Tested -->
+          <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-flask-vial text-xl text-[#0e4643]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Dermatologist Tested</h4>
+              <p class="text-[11px] text-slate-500 font-medium mt-0.5">For All Skin Types</p>
+            </div>
+          </div>
+
+          <!-- Prop 3: Paraben & Sulfate Free -->
+          <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-droplet text-xl text-[#0e4643]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Paraben & Sulfate Free</h4>
+              <p class="text-[11px] text-slate-500 font-medium mt-0.5">Clean & Gentle</p>
+            </div>
+          </div>
+
+          <!-- Prop 4: Cruelty Free -->
+          <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-heart text-xl text-[#0e4643]"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Cruelty Free</h4>
+              <p class="text-[11px] text-slate-500 font-medium mt-0.5">Never Tested on Animals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: ValuePropositionBar -->
+
+    <!-- BEGIN: ShopByCategorySection -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8 text-center" data-purpose="category-section" id="shop">
+      <div class="flex items-center justify-center space-x-4 mb-10">
+        <span class="h-[1px] w-12 bg-slate-300"></span>
+        <h2 class="text-xs sm:text-sm tracking-[0.25em] font-bold text-[#0e4643] uppercase">Shop by Category</h2>
+        <span class="h-[1px] w-12 bg-slate-300"></span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
+        <!-- Category 1: Serums -->
+        <a class="group category-ring flex flex-col items-center" href="#category-serums">
+          <div class="category-img-container">
+            <img alt="Serums" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWiL9l1lYUyGNWQiHoox8caFjvCDsNS80Fq574H1GqyUPcqlkdsvv2I6Ch_Gm5mDxywgEbXhtAVAd8sQQthSRqrMIDl5B2hA3Q6CS9oBC_KOhCORxu3pwkDaw_zh9Sp8MwjdTiYHr0nsiTVzxCbS8NzBwiRcVojZ-YL_K7tVYGlX16x1kkP4UsRVVhaqidMK1puUZTcSab4c-uR5CkA4Xt6IyyZgSZQvzeTjvKFYva0IYQUiy2fL3lw"/>
+          </div>
+          <h3 class="category-title">Serums</h3>
+          <span class="category-subtitle">Explore</span>
+        </a>
+
+        <!-- Category 2: Moisturizers -->
+        <a class="group category-ring flex flex-col items-center" href="#category-moisturizers">
+          <div class="category-img-container">
+            <img alt="Moisturizers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6DuL_vNcZjV6655Xtf6PQ49rJae0easENf8pl7ErOaLoB6VAemQ7aTmE-DbW8DoxPSxcRA7X1sY3q8naPSq2DxnxKE648Um50WkeSQwrq2o-4p6gb3LRxebrQ6taYJJ8QfTByH5R9kwlTZXXMUTvOF6-8VWCu5TgQz8Ieo-UjJy_LFIGmP6Q0Vs1TkArSLyHdFL1JUn9PtD7Gilssd77Or1NOALyBpvAxr8HY9kx7o_AVKUIS2sxH9A"/>
+          </div>
+          <h3 class="category-title">Moisturizers</h3>
+          <span class="category-subtitle">Explore</span>
+        </a>
+
+        <!-- Category 3: Cleansers -->
+        <a class="group category-ring flex flex-col items-center" href="#category-cleansers">
+          <div class="category-img-container">
+            <img alt="Cleansers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Q6EKwGCCBoGf_M7w3DScThFyTCQ4BiltZETVjuBeOw8INfyeXE5DGpWGS-16BVFQzNaBEJYhWnwY-3mf-uPV-E0MLfAw79rpdwzpuUJg8zhOCsBGXKjpHT22sD7gjsZqK1gOD-Iy-pp0ehOPZpHGk0-NBZOF9dqORRNx0vIgLdqn5XV2RDELUtA69sGcEqhmV9HnJ6eNf8824FsYT1o8hZvtHMFVIE41UAmWPoKn-KsxzhIr3GpX4A"/>
+          </div>
+          <h3 class="category-title">Cleansers</h3>
+          <span class="category-subtitle">Explore</span>
+        </a>
+
+        <!-- Category 4: Toners -->
+        <a class="group category-ring flex flex-col items-center" href="#category-toners">
+          <div class="category-img-container">
+            <img alt="Toners" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3fw8c2SWUYJWL_h6uIKWE61-ZODfH2vb42M1qswdXs4kLjX0glNR4qeyPRs-CVoFFV_N8VPkGBhksQL-CFNCikcPctr9ekOwFU95Oq5QngbwPxBUJqPumDrYgP7DNwp5qRxEPDUnV40NQmc804yL-xptbxZbZl_CSX6D0AL1sitrOyE7Eo7u_tombpR_T2HDyJ8EEdT5RAS0IKgEm7tnzw5LnqHaAJwbnHv1ohue34WONGiJotnQZg"/>
+          </div>
+          <h3 class="category-title">Toners</h3>
+          <span class="category-subtitle">Explore</span>
+        </a>
+
+        <!-- Category 5: Eye Care -->
+        <a class="group category-ring flex flex-col items-center" href="#category-eyecare">
+          <div class="category-img-container">
+            <img alt="Eye Care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDJN2wVdLq7SQpihPuTuZzrwKPFltF4dOigoKJwo3cagyQuUqVCPeK6WzzR3uGRIUIHyF75KQL_TJOOX4_cjbIt9Mp_CYPhRtO-oGKD_-7xEcfT1r_oantBo7ATtBYg5JC6DIDURcVr5TH95cYMgIYW_sZcGeMRdDBcSuNHjwMXpdFF6hKe9yV1CEvuAE91u15DeQvxOsnlnH4hj8SSL_uLXkPcqghdmP8PeOEVEAhw1EcU2eMmYwOhA"/>
+          </div>
+          <h3 class="category-title">Eye Care</h3>
+          <span class="category-subtitle">Explore</span>
+        </a>
+
+        <!-- Category 6: Sun Care -->
+        <a class="group category-ring flex flex-col items-center" href="#category-suncare">
+          <div class="category-img-container">
+            <img alt="Sun Care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkqsQuUhoM_laI0u51NEEY2QTpfUKH7nxGuUcVAOPvBImBTpl5Jg0wh1OGj3PcLfVJ5fVOzZgTjaTUenUyGaZQi_RP7tt6025GEtIMZO3ScWgzaawIzMM25FeWYu-E2O6-rswdBWXz0YeCsbsKG5LX28oYK6vBWF9HOCeLFe1jZhpaE8BvZN05J962AqDraD2Pk3nVQ-zDhfpJQmS2nCAtRokav-x1_UyRzY1wJGGaIOLXHrtU9tqMxw"/>
+          </div>
+          <h3 class="category-title">Sun Care</h3>
+          <span class="category-subtitle">Explore</span>
+        </a>
+      </div>
+    </section>
+    <!-- END: ShopByCategorySection -->
+
+    <!-- BEGIN: FeaturedProductsSection -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="featured-products-grid" id="featured-products">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-[#0e4643] flex items-center gap-3">
+          Featured Products
+          <span class="h-[1px] w-12 bg-slate-300 inline-block"></span>
+        </h2>
+        <a class="text-xs font-bold tracking-widest text-[#0e4643] hover:text-teal-600 border border-[#0e4643]/30 px-4 py-2 rounded-full uppercase transition" href="#all-products">
+          View All
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product 1: Best Seller -->
+        <article class="product-card group" data-product-id="101">
+          <div>
+            <div class="product-card__image-box">
+              <span class="product-card__badge">Best Seller</span>
+              <img alt="Hydra Glow Gel Cream" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA"/>
+            </div>
+            <h3 class="product-card__title">
+              <a href="#">Hydra Glow<br/>Gel Cream</a>
+            </h3>
+            <div class="product-card__rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span class="product-card__reviews-count">(245)</span>
+            </div>
+            <div class="product-card__price-row">
+              <span>$34.00</span>
+            </div>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-add-to-cart" onclick="addToCart({ id: 101, title: 'Hydra Glow Gel Cream', price: 3400, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA' })">
+              <span>Add to Cart</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist" onclick="toggleWishlist(101, this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 2: New -->
+        <article class="product-card group" data-product-id="102">
+          <div>
+            <div class="product-card__image-box">
+              <span class="product-card__badge">New</span>
+              <img alt="Radiance Boost Serum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5aB2COJAeOvOLGaZOry1CD5mRizrITc_qdwIGqDU-C6qec2dGL46k-CRKXWx9qRaAY93KhXeISPD5OrVZ7byUp_KUFHW5Q6EJmeyR1UmlIL_cfDjDcSMby568yeJXfy3DGKr8zVEVXn7vhPgwx_hr_nGYiHD8Kg4lG9ULWbmy1ed009fgTjeziwtSIkBezbCnE176ZGDTdzjcU0DYb0lJO9MwW7HnsUD8GsHqOgAywTrOF6WaNkvDQ"/>
+            </div>
+            <h3 class="product-card__title">
+              <a href="#">Radiance Boost<br/>Serum</a>
+            </h3>
+            <div class="product-card__rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span class="product-card__reviews-count">(189)</span>
+            </div>
+            <div class="product-card__price-row">
+              <span>$42.00</span>
+            </div>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-add-to-cart" onclick="addToCart({ id: 102, title: 'Radiance Boost Serum', price: 4200, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDa5aB2COJAeOvOLGaZOry1CD5mRizrITc_qdwIGqDU-C6qec2dGL46k-CRKXWx9qRaAY93KhXeISPD5OrVZ7byUp_KUFHW5Q6EJmeyR1UmlIL_cfDjDcSMby568yeJXfy3DGKr8zVEVXn7vhPgwx_hr_nGYiHD8Kg4lG9ULWbmy1ed009fgTjeziwtSIkBezbCnE176ZGDTdzjcU0DYb0lJO9MwW7HnsUD8GsHqOgAywTrOF6WaNkvDQ' })">
+              <span>Add to Cart</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist" onclick="toggleWishlist(102, this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 3: Limited -->
+        <article class="product-card group" data-product-id="103">
+          <div>
+            <div class="product-card__image-box">
+              <span class="product-card__badge">Limited</span>
+              <img alt="Nourishing Night Restorative Cream" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuCD2lYIUuSUMWLcySxeU4pbit6lg5chvOGwU_rrqMRE9fowbDMx9r74rqAeZepksQOfmGs-G3wmwx5tq2MpdIGlYlOzSxxob3oLj3pF7B2-zsAG-2rjT1cnhwMljMyutu2Mmqw16q5zfkHzqvjc7z4VSdpawxF0YtmeeYiAe8EsdL9ukTFA4NZeJSumnYuvDtZHIC7nTKS7U-qQkQ8wrYCL9626Rk0tMkQGBfAiibFdrr305ZtF74nQ"/>
+            </div>
+            <h3 class="product-card__title">
+              <a href="#">Nourishing Night<br/>Restorative Cream</a>
+            </h3>
+            <div class="product-card__rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span class="product-card__reviews-count">(312)</span>
+            </div>
+            <div class="product-card__price-row">
+              <span>$38.00</span>
+            </div>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-add-to-cart" onclick="addToCart({ id: 103, title: 'Nourishing Night Restorative Cream', price: 3800, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCuCD2lYIUuSUMWLcySxeU4pbit6lg5chvOGwU_rrqMRE9fowbDMx9r74rqAeZepksQOfmGs-G3wmwx5tq2MpdIGlYlOzSxxob3oLj3pF7B2-zsAG-2rjT1cnhwMljMyutu2Mmqw16q5zfkHzqvjc7z4VSdpawxF0YtmeeYiAe8EsdL9ukTFA4NZeJSumnYuvDtZHIC7nTKS7U-qQkQ8wrYCL9626Rk0tMkQGBfAiibFdrr305ZtF74nQ' })">
+              <span>Add to Cart</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist" onclick="toggleWishlist(103, this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- Product 4: Sale -->
+        <article class="product-card group" data-product-id="104">
+          <div>
+            <div class="product-card__image-box">
+              <span class="product-card__badge">Sale</span>
+              <img alt="Daily UV Defense Sunscreen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJDUNyiqhoYH4fLrSG_VlyHbhUVR8xp4w3cb6lMdj6GV5F1iLP1UnQ_8pUwl0sdJ8Xp2R8T6lMVmVE-A1dMN7w8zQpgti7apxbq1BrgXLi8-yC9022Q4KLSb8YXboB_51Ih344xqkuGQKViWqDNe5AsvLnt0f3Y_kpIOaiqGd8e1h-4bjoCR70VlemWmUA5Y5Mp4zqYHCSGvnRA9lrMwuT3QVID5d1h9xXGF3ek82L_OgqeGJQ-iFInw"/>
+            </div>
+            <h3 class="product-card__title">
+              <a href="#">Daily UV Defense<br/>Sunscreen <span class="text-teal-700 font-bold">SPF 50</span></a>
+            </h3>
+            <div class="product-card__rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span class="product-card__reviews-count">(156)</span>
+            </div>
+            <div class="product-card__price-row">
+              <span>$24.00</span>
+              <span class="product-card__price-compare">$30.00</span>
+            </div>
+          </div>
+          <div class="product-card__actions">
+            <button type="button" class="btn-add-to-cart" onclick="addToCart({ id: 104, title: 'Daily UV Defense Sunscreen SPF 50', price: 2400, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJDUNyiqhoYH4fLrSG_VlyHbhUVR8xp4w3cb6lMdj6GV5F1iLP1UnQ_8pUwl0sdJ8Xp2R8T6lMVmVE-A1dMN7w8zQpgti7apxbq1BrgXLi8-yC9022Q4KLSb8YXboB_51Ih344xqkuGQKViWqDNe5AsvLnt0f3Y_kpIOaiqGd8e1h-4bjoCR70VlemWmUA5Y5Mp4zqYHCSGvnRA9lrMwuT3QVID5d1h9xXGF3ek82L_OgqeGJQ-iFInw' })">
+              <span>Add to Cart</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <button type="button" class="btn-wishlist" aria-label="Add to Wishlist" onclick="toggleWishlist(104, this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- END: FeaturedProductsSection -->
+
+    <!-- BEGIN: PromotionalBannerSection -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="promo-club-banner">
+      <div class="bg-[#0b3c39] rounded-3xl overflow-hidden text-white shadow-xl grid grid-cols-1 lg:grid-cols-12 items-center">
+        <!-- Left Product Showcase Image -->
+        <div class="lg:col-span-4 h-64 lg:h-full relative min-h-[220px]">
+          <img alt="Skincare serums and cream jars on stone display" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBprMJtnc9JxdqI-Rj4awdfyJuB1byrdqdmh4X75KeGCX8Xzv8uSZQUH7S-8npqWlUFcE3C0EnkFQVUA41chryu941sPvkkKfTpKbUPykGUDLPyH-P4KLHJY-r55pEpXrke6yK85ZQgOzSgd5EfYlSzpl5duGolETzCAoYKryt8duP_wFDZi_UaEqyMSxGx84-dtpBVCUTfYjFZGzpgQ4R0dcpGVUlNuuXDgGM4VBficLfY0qYw5jxn8w"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#0b3c39]/30 to-[#0b3c39]"></div>
+        </div>
+        
+        <!-- Middle: Promo Headline -->
+        <div class="lg:col-span-5 p-6 sm:p-10 space-y-2">
+          <span class="text-[11px] font-bold tracking-[0.25em] text-teal-300 uppercase">Special Offer</span>
+          <h2 class="font-playfair text-3xl sm:text-4xl font-normal leading-tight">
+            Get 20% Off<br/>Your First Order
+          </h2>
+          <p class="text-teal-200/80 text-xs sm:text-sm font-light pt-1">
+            Join our glow club & unlock exclusive offers and skincare tips.
+          </p>
+        </div>
+
+        <!-- Right: Newsletter Signup Form Box -->
+        <div class="lg:col-span-3 p-6 sm:p-8 bg-[#08302e] lg:h-full flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-teal-800/50">
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-8 h-8 rounded-full bg-[#114b47] flex items-center justify-center text-teal-300 text-sm">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <span class="font-bold text-xs tracking-widest uppercase">Join Now</span>
+          </div>
+          <p class="text-[11px] text-teal-200/70 mb-4 leading-relaxed">
+            Be the first to know about new arrivals & exclusive deals.
+          </p>
+          <form class="space-y-2.5" onsubmit="event.preventDefault(); showToast('Welcome to the Glow Club! Check your inbox.'); this.reset();">
+            <input class="w-full px-3 py-2 bg-[#12423f] border border-teal-700/60 rounded text-xs text-white placeholder-teal-300/50 focus:outline-none focus:border-teal-300" placeholder="Enter your email" required="" type="email"/>
+            <button class="w-full bg-teal-300 hover:bg-teal-200 text-[#08302e] font-bold text-xs py-2 rounded uppercase tracking-wider transition" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- END: PromotionalBannerSection -->
+
+    <!-- BEGIN: TrustBadgesFooterSection -->
+    <section class="border-t border-slate-200/80 bg-white py-8 mt-6" data-purpose="trust-badges">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Trust 1: Free Shipping -->
+        <div class="flex items-center space-x-3">
+          <div class="text-[#0e4643] text-2xl">
+            <i class="fa-solid fa-truck"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Free Shipping</h4>
+            <p class="text-[11px] text-slate-500 font-medium">On orders over $50</p>
+          </div>
+        </div>
+
+        <!-- Trust 2: Secure Payment -->
+        <div class="flex items-center space-x-3">
+          <div class="text-[#0e4643] text-2xl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Secure Payment</h4>
+            <p class="text-[11px] text-slate-500 font-medium">100% safe & secure</p>
+          </div>
+        </div>
+
+        <!-- Trust 3: Easy Returns -->
+        <div class="flex items-center space-x-3">
+          <div class="text-[#0e4643] text-2xl">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Easy Returns</h4>
+            <p class="text-[11px] text-slate-500 font-medium">30 days return policy</p>
+          </div>
+        </div>
+
+        <!-- Trust 4: Customer Support -->
+        <div class="flex items-center space-x-3">
+          <div class="text-[#0e4643] text-2xl">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-xs uppercase tracking-wider text-slate-800">Customer Support</h4>
+            <p class="text-[11px] text-slate-500 font-medium">We're here to help</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: TrustBadgesFooterSection -->
+  </main>
+
+  <!-- BEGIN: SiteFooter -->
+  <footer class="bg-[#093634] text-teal-200/70 text-xs py-10 border-t border-teal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-full border border-teal-400/30 flex items-center justify-center text-teal-300">
+          <i class="fa-solid fa-spa text-sm"></i>
+        </div>
+        <span class="font-playfair font-bold text-white text-base tracking-wider">Glowérive</span>
+        <span class="text-teal-400/60 ml-2 text-[11px]">© 2026 Glowérive Skincare. All rights reserved.</span>
+      </div>
+      <div class="flex items-center space-x-6 text-[11px]">
+        <a class="hover:text-white transition" href="#privacy">Privacy Policy</a>
+        <a class="hover:text-white transition" href="#terms">Terms of Service</a>
+        <a class="hover:text-white transition" href="#shipping">Shipping Policy</a>
+      </div>
+    </div>
+  </footer>
+  <!-- END: SiteFooter -->
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cart-drawer-overlay" class="cart-drawer-overlay" onclick="closeCart()"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-drawer__header">
+      <h3>
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Your Bag</span>
+      </h3>
+      <button type="button" id="cart-drawer-close" class="cart-drawer__close" aria-label="Close Cart" onclick="closeCart()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="free-shipping-bar">
+      <div id="free-shipping-text" class="free-shipping-text">
+        Add <strong>$16.00</strong> more to unlock <strong>Free Shipping</strong>!
+      </div>
+      <div class="progress-track">
+        <div id="free-shipping-bar" class="progress-fill" style="width: 68%;"></div>
+      </div>
+    </div>
+
+    <div id="cart-items-container" class="cart-drawer__body">
+      <!-- Populated by theme.js -->
+    </div>
+
+    <div class="cart-drawer__footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-price">$76.00</span>
+      </div>
+      <p class="cart-subtotal-note">Taxes and shipping calculated at checkout</p>
+      <a href="#checkout" class="btn-checkout" onclick="showToast('Proceeding to Shopify secure checkout...')">
+        Proceed to Checkout
+      </a>
+    </div>
+  </aside>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="video-modal-backdrop" onclick="if(event.target === this) closeVideoModal()">
+    <div class="video-modal-content">
+      <button type="button" class="video-modal-close" aria-label="Close video" onclick="closeVideoModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="video-responsive-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0"
+          title="Glowérive Skincare Ritual"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-overlay" class="cart-drawer-overlay" onclick="toggleMobileMenu()"></div>
+  <div id="mobile-menu-drawer" class="cart-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
+    <div class="cart-drawer__header">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#15534f] text-teal-200">
+          <i class="fa-solid fa-spa"></i>
+        </div>
+        <span class="font-playfair text-xl font-bold tracking-wider text-white">Glowérive</span>
+      </div>
+      <button type="button" class="cart-drawer__close" onclick="toggleMobileMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="p-6 space-y-4">
+      <nav class="flex flex-col space-y-4 text-sm font-semibold tracking-wider text-slate-800">
+        <a href="#" class="text-[#0e4643] border-b pb-2">HOME</a>
+        <a href="#featured-products" class="hover:text-[#0e4643] border-b pb-2">SHOP</a>
+        <a href="#shop" class="hover:text-[#0e4643] border-b pb-2">COLLECTIONS</a>
+        <a href="#ingredients" class="hover:text-[#0e4643] border-b pb-2">INGREDIENTS</a>
+        <a href="#about" class="hover:text-[#0e4643] border-b pb-2">ABOUT US</a>
+        <a href="#blog" class="hover:text-[#0e4643] border-b pb-2">BLOG</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- Main Cart Section -->
+<section class="py-12 max-w-4xl mx-auto px-4 sm:px-8" data-purpose="main-cart">
+  <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
+    <h1 class="font-playfair text-3xl font-bold text-[#0e4643] mb-6 flex items-center justify-between">
+      <span>{{ 'cart.title' | t | default: 'Your Bag' }}</span>
+      <span class="text-sm font-sans font-normal text-slate-500">({{ cart.item_count | default: 2 }} items)</span>
+    </h1>
+
+    <div class="divide-y divide-slate-100">
+      <div class="py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA" class="w-16 h-16 object-contain rounded-lg bg-teal-50" />
+          <div>
+            <h3 class="font-bold text-slate-800 text-sm">Hydra Glow Gel Cream</h3>
+            <p class="text-xs text-slate-500">$34.00</p>
+          </div>
+        </div>
+        <div class="font-bold text-slate-900">$34.00</div>
+      </div>
+
+      <div class="py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5aB2COJAeOvOLGaZOry1CD5mRizrITc_qdwIGqDU-C6qec2dGL46k-CRKXWx9qRaAY93KhXeISPD5OrVZ7byUp_KUFHW5Q6EJmeyR1UmlIL_cfDjDcSMby568yeJXfy3DGKr8zVEVXn7vhPgwx_hr_nGYiHD8Kg4lG9ULWbmy1ed009fgTjeziwtSIkBezbCnE176ZGDTdzjcU0DYb0lJO9MwW7HnsUD8GsHqOgAywTrOF6WaNkvDQ" class="w-16 h-16 object-contain rounded-lg bg-teal-50" />
+          <div>
+            <h3 class="font-bold text-slate-800 text-sm">Radiance Boost Serum</h3>
+            <p class="text-xs text-slate-500">$42.00</p>
+          </div>
+        </div>
+        <div class="font-bold text-slate-900">$42.00</div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>
+        <p class="text-xs text-slate-500">Free shipping applied on this order.</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-500">Subtotal</div>
+        <div class="text-2xl font-bold text-slate-900 mb-3">$76.00</div>
+        <a href="/checkout" class="inline-block bg-[#0e4643] hover:bg-[#093634] text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition">
+          Proceed to Checkout
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cart Page",
+  "settings": []
+}
+{% endschema %}

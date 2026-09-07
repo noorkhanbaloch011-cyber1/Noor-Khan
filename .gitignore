@@ -1,0 +1,17 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node & Dependencies (if any added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Private Configs
+.env
+.env.local
+.shopify/
+config/settings_data.json.bak

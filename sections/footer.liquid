@@ -1,0 +1,59 @@
+<!-- Site Footer -->
+<footer class="bg-[#093634] text-teal-200/70 text-xs py-10 border-t border-teal-900" data-purpose="site-footer">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <!-- Brand Info & Copyright -->
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-full border border-teal-400/30 flex items-center justify-center text-teal-300">
+        <i class="fa-solid fa-spa text-sm"></i>
+      </div>
+      <span class="font-playfair font-bold text-white text-base tracking-wider">
+        {{ section.settings.brand_title | default: 'Glowérive' }}
+      </span>
+      <span class="text-teal-400/60 ml-2 text-[11px]">
+        © {{ 'now' | date: "%Y" }} {{ section.settings.copyright_text | default: 'Glowérive Skincare. All rights reserved.' }}
+      </span>
+    </div>
+
+    <!-- Legal & Policy Links -->
+    <div class="flex items-center space-x-6 text-[11px]">
+      <a class="hover:text-white transition" href="{{ section.settings.privacy_link | default: '/policies/privacy-policy' }}">Privacy Policy</a>
+      <a class="hover:text-white transition" href="{{ section.settings.terms_link | default: '/policies/terms-of-service' }}">Terms of Service</a>
+      <a class="hover:text-white transition" href="{{ section.settings.shipping_link | default: '/policies/shipping-policy' }}">Shipping Policy</a>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "brand_title",
+      "label": "Brand Title",
+      "default": "Glowérive"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "Glowérive Skincare. All rights reserved."
+    },
+    {
+      "type": "url",
+      "id": "privacy_link",
+      "label": "Privacy Policy Link"
+    },
+    {
+      "type": "url",
+      "id": "terms_link",
+      "label": "Terms of Service Link"
+    },
+    {
+      "type": "url",
+      "id": "shipping_link",
+      "label": "Shipping Policy Link"
+    }
+  ]
+}
+{% endschema %}

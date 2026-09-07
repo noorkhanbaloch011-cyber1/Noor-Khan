@@ -1,0 +1,85 @@
+<!-- Main Product Section -->
+<section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="main-product">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <!-- Product Gallery -->
+    <div class="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm flex items-center justify-center">
+      {%- if product.featured_image != blank -%}
+        <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title | escape }}" class="max-h-[480px] object-contain" />
+      {%- else -%}
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA" alt="Product Image" class="max-h-[480px] object-contain" />
+      {%- endif -%}
+    </div>
+
+    <!-- Product Info -->
+    <div class="space-y-6">
+      <div class="inline-flex items-center space-x-2 text-teal-700 bg-teal-50 px-3 py-1 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-leaf text-teal-600"></i>
+        <span>100% Natural Botanical Formula</span>
+      </div>
+
+      <h1 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643]">
+        {{ product.title | default: 'Hydra Glow Gel Cream' }}
+      </h1>
+
+      <div class="flex items-center space-x-2 text-amber-400 text-sm">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <span class="text-slate-500 text-xs ml-1">(245 reviews)</span>
+      </div>
+
+      <div class="text-2xl font-bold text-slate-900">
+        {{ product.price | default: 3400 | money }}
+      </div>
+
+      <div class="text-sm text-slate-600 leading-relaxed">
+        {{ product.description | default: 'An ultra-lightweight, hydrating botanical gel cream infused with hyaluronic acid, green tea extract, and soothing aloe vera to restore radiant elasticity and long-lasting glow.' }}
+      </div>
+
+      {% form 'product', product %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id | default: 101 }}">
+
+        <div class="flex items-center space-x-4 pt-4">
+          <div class="w-32">
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Quantity</label>
+            <input type="number" name="quantity" min="1" value="1" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-center">
+          </div>
+          <div class="flex-1 pt-5">
+            <button type="submit" class="w-full bg-[#0e4643] hover:bg-[#093634] text-white py-3 px-6 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg transition">
+              {{ 'products.product.add_to_cart' | t | default: 'Add to Cart' }}
+            </button>
+          </div>
+        </div>
+      {% endform %}
+
+      <!-- Skincare Benefits Pills -->
+      <div class="grid grid-cols-2 gap-3 pt-6 border-t border-slate-200">
+        <div class="flex items-center space-x-2 text-xs text-slate-700">
+          <i class="fa-solid fa-droplet text-teal-600"></i>
+          <span>72hr Deep Moisture</span>
+        </div>
+        <div class="flex items-center space-x-2 text-xs text-slate-700">
+          <i class="fa-solid fa-shield-halved text-teal-600"></i>
+          <span>Barrier Restoration</span>
+        </div>
+        <div class="flex items-center space-x-2 text-xs text-slate-700">
+          <i class="fa-solid fa-sun text-teal-600"></i>
+          <span>Fast Absorbing Finish</span>
+        </div>
+        <div class="flex items-center space-x-2 text-xs text-slate-700">
+          <i class="fa-solid fa-heart text-teal-600"></i>
+          <span>Non-comedogenic</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": []
+}
+{% endschema %}

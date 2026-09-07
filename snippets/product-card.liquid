@@ -1,0 +1,83 @@
+{% comment %}
+  Renders a product card
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+  - badge_text: {String} Badge label (e.g. 'Best Seller', 'New', 'Sale')
+  - title: {String} Product title fallback
+  - price: {Number} Price in cents fallback
+  - compare_price: {Number} Compare at price fallback
+  - rating: {Number} Star rating (1-5)
+  - reviews_count: {Number} Review count
+  - image_url: {String} Image source URL fallback
+{% endcomment %}
+
+{%- liquid
+  assign card_title = product.title | default: title | default: 'Hydra Glow Gel Cream'
+  assign card_price = product.price | default: price | default: 3400
+  assign card_compare = product.compare_at_price | default: compare_price
+  assign card_image = product.featured_image | image_url: width: 600 | default: image_url
+  assign card_id = product.selected_or_first_available_variant.id | default: product.id | default: 101
+  assign card_badge = badge_text
+  if product and product.compare_at_price > product.price
+    assign card_badge = 'Sale'
+  endif
+-%}
+
+<article class="product-card group" data-product-id="{{ card_id }}">
+  <div>
+    <div class="product-card__image-box">
+      {%- if card_badge != blank -%}
+        <span class="product-card__badge">{{ card_badge }}</span>
+      {%- endif -%}
+      <img
+        src="{{ card_image }}"
+        alt="{{ card_title | escape }}"
+        loading="lazy"
+        width="300"
+        height="300"
+      />
+    </div>
+
+    <h3 class="product-card__title">
+      <a href="{{ product.url | default: '#' }}">{{ card_title }}</a>
+    </h3>
+
+    <div class="product-card__rating">
+      {%- assign stars = rating | default: 5 -%}
+      {%- for i in (1..5) -%}
+        {%- if i <= stars -%}
+          <i class="fa-solid fa-star"></i>
+        {%- else -%}
+          <i class="fa-regular fa-star"></i>
+        {%- endif -%}
+      {%- endfor -%}
+      <span class="product-card__reviews-count">({{ reviews_count | default: 245 }})</span>
+    </div>
+
+    <div class="product-card__price-row">
+      <span>{{ card_price | money }}</span>
+      {%- if card_compare and card_compare > card_price -%}
+        <span class="product-card__price-compare">{{ card_compare | money }}</span>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="product-card__actions">
+    <button
+      type="button"
+      class="btn-add-to-cart"
+      onclick="addToCart({ id: {{ card_id }}, title: '{{ card_title | escape }}', price: {{ card_price }}, image: '{{ card_image }}' })"
+    >
+      <span>Add to Cart</span>
+      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+    </button>
+    <button
+      type="button"
+      class="btn-wishlist"
+      aria-label="Add to Wishlist"
+      onclick="toggleWishlist({{ card_id }}, this)"
+    >
+      <i class="fa-regular fa-heart"></i>
+    </button>
+  </div>
+</article>

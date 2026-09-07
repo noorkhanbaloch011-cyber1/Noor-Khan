@@ -1,0 +1,46 @@
+{
+  "general": {
+    "search": "Search products, collections...",
+    "close": "Close",
+    "view_all": "View All",
+    "learn_more": "Learn More"
+  },
+  "header": {
+    "home": "HOME",
+    "shop": "SHOP",
+    "collections": "COLLECTIONS",
+    "ingredients": "INGREDIENTS",
+    "about": "ABOUT US",
+    "blog": "BLOG"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "regular_price": "Regular Price",
+      "sale_price": "Sale Price",
+      "best_seller": "Best Seller",
+      "new": "New",
+      "limited": "Limited",
+      "sale": "Sale",
+      "explore": "Explore",
+      "quantity": "Quantity"
+    }
+  },
+  "cart": {
+    "title": "Your Bag",
+    "empty": "Your cart is currently empty.",
+    "start_shopping": "Start Shopping",
+    "subtotal": "Subtotal",
+    "taxes_and_shipping_policy_at_checkout_html": "Taxes and shipping calculated at checkout",
+    "checkout": "Proceed to Checkout",
+    "free_shipping_eligible": "Congratulations! You qualify for Free Shipping.",
+    "free_shipping_remaining_html": "Add <strong>{{ amount }}</strong> more to unlock <strong>Free Shipping</strong>!"
+  },
+  "newsletter": {
+    "label": "Email Address",
+    "placeholder": "Enter your email",
+    "button_label": "Subscribe",
+    "success": "Thanks for subscribing to Glowérive!"
+  }
+}

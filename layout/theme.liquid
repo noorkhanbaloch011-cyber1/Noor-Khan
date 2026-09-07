@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_teal | default: '#0e4643' }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+  {%- if page_image -%}
+    <meta property="og:image" content="http:{{ page_image | image_url }}">
+    <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
+    <meta property="og:image:width" content="{{ page_image.width }}">
+    <meta property="og:image:height" content="{{ page_image.height }}">
+  {%- endif -%}
+
+  <title>
+    {{ page_title }}
+    {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+    {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  </title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CDN with plugins for utility compatibility -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#0e4643',
+              darkTeal: '#093634',
+              accentTeal: '#1b635e',
+              mint: '#e6f3f0',
+              softBg: '#f7fbf9',
+              gold: '#d4a373',
+              cream: '#fbf9f6'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Theme Stylesheet -->
+  {{ 'base.css' | asset_url | stylesheet_tag }}
+
+  {{ content_for_header }}
+</head>
+
+<body class="bg-[#f7fbf9] text-slate-800 antialiased selection:bg-[#1b635e] selection:text-white">
+  <a class="skip-to-content-link button visually-hidden sr-only" href="#MainContent">
+    Skip to content
+  </a>
+
+  {% section 'announcement-bar' %}
+  {% section 'header' %}
+
+  <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'footer' %}
+
+  <!-- Cart Drawer Component -->
+  {% render 'cart-drawer' %}
+
+  <!-- Global Video Modal -->
+  <div id="video-modal" class="video-modal-backdrop" onclick="if(event.target === this) closeVideoModal()">
+    <div class="video-modal-content">
+      <button type="button" class="video-modal-close" aria-label="Close video" onclick="closeVideoModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="video-responsive-wrap">
+        <iframe
+          id="brand-video-frame"
+          src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0&enablejsapi=1"
+          title="Glowérive Natural Skincare Routine"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer Overlay & Drawer -->
+  <div id="mobile-menu-overlay" class="cart-drawer-overlay" onclick="toggleMobileMenu()"></div>
+  <div id="mobile-menu-drawer" class="cart-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
+    <div class="cart-drawer__header">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#15534f] text-teal-200">
+          <i class="fa-solid fa-spa"></i>
+        </div>
+        <span class="font-playfair text-xl font-bold tracking-wider text-white">Glowérive</span>
+      </div>
+      <button type="button" class="cart-drawer__close" onclick="toggleMobileMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="p-6 space-y-4">
+      <nav class="flex flex-col space-y-4 text-sm font-semibold tracking-wider text-slate-800">
+        <a href="/" class="text-[#0e4643] border-b pb-2">HOME</a>
+        <a href="/collections/all" class="hover:text-[#0e4643] border-b pb-2">SHOP</a>
+        <a href="/collections" class="hover:text-[#0e4643] border-b pb-2">COLLECTIONS</a>
+        <a href="#ingredients" class="hover:text-[#0e4643] border-b pb-2">INGREDIENTS</a>
+        <a href="/pages/about" class="hover:text-[#0e4643] border-b pb-2">ABOUT US</a>
+        <a href="/blogs/news" class="hover:text-[#0e4643] border-b pb-2">BLOG</a>
+      </nav>
+      <div class="pt-6 border-t border-slate-200">
+        <div class="text-xs text-slate-500 mb-2">Free Shipping on Orders Over $50</div>
+        <div class="flex space-x-4 text-teal-800">
+          <a href="#" class="hover:text-teal-600"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a href="#" class="hover:text-teal-600"><i class="fa-brands fa-facebook text-lg"></i></a>
+          <a href="#" class="hover:text-teal-600"><i class="fa-brands fa-pinterest text-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Theme Global Scripts -->
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+</body>
+</html>

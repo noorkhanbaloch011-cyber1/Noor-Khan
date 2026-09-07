@@ -1,0 +1,31 @@
+{
+  "current": {
+    "color_teal": "#0e4643",
+    "color_dark_teal": "#093634",
+    "color_accent_teal": "#1b635e",
+    "color_mint": "#e6f3f0",
+    "color_bg_soft": "#f7fbf9",
+    "color_gold": "#d4a373",
+    "color_text_primary": "#2b3938",
+    "cart_type": "drawer",
+    "free_shipping_threshold": 50,
+    "free_shipping_notice": "Free Shipping on Orders Over $50",
+    "social_instagram": "https://instagram.com",
+    "social_facebook": "https://facebook.com",
+    "social_pinterest": "https://pinterest.com",
+    "social_tiktok": "https://tiktok.com"
+  },
+  "presets": {
+    "Default": {
+      "color_teal": "#0e4643",
+      "color_dark_teal": "#093634",
+      "color_accent_teal": "#1b635e",
+      "color_mint": "#e6f3f0",
+      "color_bg_soft": "#f7fbf9",
+      "color_gold": "#d4a373",
+      "color_text_primary": "#2b3938",
+      "cart_type": "drawer",
+      "free_shipping_threshold": 50
+    }
+  }
+}

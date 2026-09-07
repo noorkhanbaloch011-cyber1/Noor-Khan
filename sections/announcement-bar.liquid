@@ -1,0 +1,60 @@
+<!-- Top Announcement Bar -->
+{%- if section.settings.show_announcement -%}
+  <div class="bg-[#093634] text-teal-100 text-xs py-2 px-4 sm:px-8 border-b border-[#144c48]" data-purpose="top-announcement-bar">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-2 font-medium">
+        <i class="fa-solid fa-truck-fast text-teal-300"></i>
+        <span>{{ section.settings.announcement_text | default: 'Free Shipping on Orders Over $50' }}</span>
+      </div>
+      <div class="flex items-center space-x-6 text-[11px] tracking-wide text-teal-200">
+        <a class="hover:text-white transition" href="{{ section.settings.link_track | default: '#track-order' }}">Track Order</a>
+        <span class="text-teal-600">|</span>
+        <a class="hover:text-white transition" href="{{ section.settings.link_faq | default: '#faq' }}">FAQ</a>
+        <span class="text-teal-600">|</span>
+        <a class="hover:text-white transition" href="{{ section.settings.link_store | default: '#store-locator' }}">Store Locator</a>
+        <span class="text-teal-600">|</span>
+        <a class="hover:text-white transition" href="{{ section.settings.link_contact | default: '#contact' }}">Contact Us</a>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement bar",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "Free Shipping on Orders Over $50"
+    },
+    {
+      "type": "url",
+      "id": "link_track",
+      "label": "Track Order Link"
+    },
+    {
+      "type": "url",
+      "id": "link_faq",
+      "label": "FAQ Link"
+    },
+    {
+      "type": "url",
+      "id": "link_store",
+      "label": "Store Locator Link"
+    },
+    {
+      "type": "url",
+      "id": "link_contact",
+      "label": "Contact Us Link"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,25 @@
+{% comment %}
+  Renders a list of product's price (regular, sale)
+  Usage: {% render 'price', product: product, price_class: 'custom-class' %}
+{% endcomment %}
+
+{%- liquid
+  assign target = product
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  assign on_sale = false
+  if compare_at_price > price
+    assign on_sale = true
+  endif
+-%}
+
+<div class="product-card__price-row {{ price_class }}">
+  <span class="price-item price-item--regular">
+    {{ price | money }}
+  </span>
+  {%- if on_sale -%}
+    <span class="product-card__price-compare">
+      {{ compare_at_price | money }}
+    </span>
+  {%- endif -%}
+</div>
