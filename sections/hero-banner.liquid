@@ -40,26 +40,26 @@
       </div>
     </div>
 
-    <!-- Hero Skincare Model Image Representation -->
+    <!-- Hero Skincare Model Image -->
     <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
       <div class="relative w-full max-w-lg">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/20">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/30">
           {%- if section.settings.hero_image != blank -%}
             <img 
-              alt="{{ section.settings.hero_image.alt | default: 'Radiant skincare model showcasing healthy glowing skin' | escape }}" 
-              class="w-full h-[460px] sm:h-[540px] object-cover object-center" 
+              alt="{{ section.settings.hero_image.alt | default: 'Radiant botanical skincare model' | escape }}" 
+              class="w-full h-[480px] sm:h-[560px] object-cover object-center" 
               src="{{ section.settings.hero_image | image_url: width: 1200 }}" 
               loading="eager"
             />
           {%- else -%}
             <img 
-              alt="Radiant skincare model showcasing healthy glowing skin with botanical water splashes" 
-              class="w-full h-[460px] sm:h-[540px] object-cover object-center" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBidVnZgeOyVsiB1AAhsA2ASW2LfrNev5YVj_JZO1_VjehLdfVeaSk-qGORNan29tmqoyf0zQa-_d-O3QGHtyJrtqwSsGnv8E2uGze3No6vFQjPupqngQPxBMnUoEhqx85Cb9WX3Z7zmGhgmWF7V81BlwlQTHuqAfPKWG_HR4tAysO28EztkUt0RZe_Ud7RkV-mS62hSCER-JMAIrv_1M7n4W-af2i6zmnF9hTvRFTiIWrAimrJ27pONg" 
+              alt="Radiant skincare model with glowing dewy skin and botanical eucalyptus leaves" 
+              class="w-full h-[480px] sm:h-[560px] object-cover object-center" 
+              src="{{ 'hero-model.jpg' | asset_url }}" 
               loading="eager"
             />
           {%- endif -%}
-          <!-- Ambient mint leaf accent overlay simulation -->
+          <!-- Ambient mint leaf accent overlay -->
           <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
         </div>
       </div>

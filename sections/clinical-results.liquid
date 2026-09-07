@@ -1,0 +1,78 @@
+<!-- Clinical Results & Proven Efficacy Section -->
+<section class="py-16 bg-[#0e4643] text-white relative overflow-hidden" data-purpose="clinical-results-section">
+  <!-- Subtle ambient glow overlay -->
+  <div class="absolute inset-0 bg-radial-gradient from-teal-500/10 via-transparent to-transparent pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center space-x-2 text-teal-300 bg-teal-900/50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3 border border-teal-500/20">
+        <i class="fa-solid fa-microscope text-teal-400"></i>
+        <span>{{ section.settings.eyebrow | default: 'Science Backed Actives' }}</span>
+      </div>
+      <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-white mb-3">
+        {{ section.settings.heading | default: 'Clinically Proven Botanical Results' }}
+      </h2>
+      <p class="text-sm text-teal-100/80 leading-relaxed font-light">
+        {{ section.settings.subheading | default: 'Based on an independent 4-week clinical consumer study with 120 diverse skin participants.' }}
+      </p>
+    </div>
+
+    <!-- 4 Stats Cards Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+        <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">98%</div>
+        <div class="text-xs sm:text-sm font-semibold text-white mb-1">Radiance Boost</div>
+        <p class="text-[11px] text-teal-200/70 font-light">Saw visible boost in natural luminosity within 7 days.</p>
+      </div>
+
+      <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+        <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">94%</div>
+        <div class="text-xs sm:text-sm font-semibold text-white mb-1">Deep Hydration</div>
+        <p class="text-[11px] text-teal-200/70 font-light">Reported 72-hour continuous moisture retention.</p>
+      </div>
+
+      <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+        <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">92%</div>
+        <div class="text-xs sm:text-sm font-semibold text-white mb-1">Barrier Calm</div>
+        <p class="text-[11px] text-teal-200/70 font-light">Noticed visibly reduced redness and zero irritation.</p>
+      </div>
+
+      <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+        <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">100%</div>
+        <div class="text-xs sm:text-sm font-semibold text-white mb-1">Clean & Vegan</div>
+        <p class="text-[11px] text-teal-200/70 font-light">Formulated without parabens, sulfates, or artificial dye.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clinical Results",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Science Backed Actives"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Clinically Proven Botanical Results"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Based on an independent 4-week clinical consumer study."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clinical Results"
+    }
+  ]
+}
+{% endschema %}

@@ -91,7 +91,7 @@
         <a class="text-white border-b-2 border-teal-300 pb-1 font-bold" href="#">HOME</a>
         <a class="hover:text-teal-300 transition" href="#routine">ROUTINE</a>
         <a class="hover:text-teal-300 transition" href="#featured-products">SHOP</a>
-        <a class="hover:text-teal-300 transition" href="#shop">COLLECTIONS</a>
+        <a class="hover:text-teal-300 transition" href="#ingredients">INGREDIENTS</a>
         <a class="hover:text-teal-300 transition" href="#reviews">REVIEWS</a>
         <a class="hover:text-teal-300 transition" href="#faq">FAQ</a>
       </nav>
@@ -148,10 +148,11 @@
           </div>
         </div>
 
+        <!-- High-Fashion Skincare Model Image -->
         <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
           <div class="relative w-full max-w-lg">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/20">
-              <img alt="Radiant skincare model showcasing healthy glowing skin with botanical water splashes" class="w-full h-[460px] sm:h-[540px] object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBidVnZgeOyVsiB1AAhsA2ASW2LfrNev5YVj_JZO1_VjehLdfVeaSk-qGORNan29tmqoyf0zQa-_d-O3QGHtyJrtqwSsGnv8E2uGze3No6vFQjPupqngQPxBMnUoEhqx85Cb9WX3Z7zmGhgmWF7V81BlwlQTHuqAfPKWG_HR4tAysO28EztkUt0RZe_Ud7RkV-mS62hSCER-JMAIrv_1M7n4W-af2i6zmnF9hTvRFTiIWrAimrJ27pONg"/>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/30">
+              <img alt="Radiant botanical skincare model with dewy glowing skin and fresh eucalyptus leaves" class="w-full h-[480px] sm:h-[560px] object-cover object-center" src="../assets/hero-model.jpg"/>
               <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
             </div>
           </div>
@@ -160,8 +161,27 @@
     </section>
     <!-- END: HeroSection -->
 
+    <!-- BEGIN: PressLogosSection -->
+    <section class="py-6 bg-white border-b border-slate-100" data-purpose="press-logos-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+          <span class="text-[11px] font-bold tracking-[0.25em] text-slate-400 uppercase text-center md:text-left">
+            Featured In & Praised By
+          </span>
+          <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-slate-700">
+            <span class="font-serif text-lg sm:text-xl tracking-widest font-black">VOGUE</span>
+            <span class="font-serif text-lg sm:text-xl tracking-wider font-bold italic">ELLE</span>
+            <span class="font-serif text-base sm:text-lg tracking-widest uppercase font-semibold">Harper's BAZAAR</span>
+            <span class="font-sans text-lg sm:text-xl tracking-widest font-black uppercase">allure</span>
+            <span class="font-serif text-lg sm:text-xl tracking-wider font-bold uppercase">GLAMOUR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: PressLogosSection -->
+
     <!-- BEGIN: ValuePropositionBar -->
-    <div class="relative z-20 max-w-6xl mx-auto px-4 -mt-16 mb-8" data-purpose="value-props">
+    <div class="relative z-20 max-w-6xl mx-auto px-4 mt-8 mb-12" data-purpose="value-props">
       <div class="bg-white rounded-2xl shadow-xl border border-gray-100/80 p-6 md:p-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           <div class="flex items-center space-x-3.5 pt-2 md:pt-0 md:px-3 first:pt-0">
@@ -284,7 +304,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <!-- Step 1 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -302,7 +321,6 @@
           </a>
         </div>
 
-        <!-- Step 2 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -320,7 +338,6 @@
           </a>
         </div>
 
-        <!-- Step 3 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -338,7 +355,6 @@
           </a>
         </div>
 
-        <!-- Step 4 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -356,7 +372,6 @@
           </a>
         </div>
 
-        <!-- Step 5 -->
         <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -376,6 +391,51 @@
       </div>
     </section>
     <!-- END: SkincareRoutineSection -->
+
+    <!-- BEGIN: ClinicalResultsSection -->
+    <section class="py-16 bg-[#0e4643] text-white relative overflow-hidden" data-purpose="clinical-results-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center space-x-2 text-teal-300 bg-teal-900/50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3 border border-teal-500/20">
+            <i class="fa-solid fa-microscope text-teal-400"></i>
+            <span>Science Backed Actives</span>
+          </div>
+          <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-white mb-3">
+            Clinically Proven Botanical Results
+          </h2>
+          <p class="text-sm text-teal-100/80 leading-relaxed font-light">
+            Based on an independent 4-week clinical consumer study with 120 diverse skin participants.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">98%</div>
+            <div class="text-xs sm:text-sm font-semibold text-white mb-1">Radiance Boost</div>
+            <p class="text-[11px] text-teal-200/70 font-light">Saw visible boost in natural luminosity within 7 days.</p>
+          </div>
+
+          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">94%</div>
+            <div class="text-xs sm:text-sm font-semibold text-white mb-1">Deep Hydration</div>
+            <p class="text-[11px] text-teal-200/70 font-light">Reported 72-hour continuous moisture retention.</p>
+          </div>
+
+          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">92%</div>
+            <div class="text-xs sm:text-sm font-semibold text-white mb-1">Barrier Calm</div>
+            <p class="text-[11px] text-teal-200/70 font-light">Noticed visibly reduced redness and zero irritation.</p>
+          </div>
+
+          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">100%</div>
+            <div class="text-xs sm:text-sm font-semibold text-white mb-1">Clean & Vegan</div>
+            <p class="text-[11px] text-teal-200/70 font-light">Formulated without parabens, sulfates, or artificial dye.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: ClinicalResultsSection -->
 
     <!-- BEGIN: FeaturedProductsSection -->
     <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="featured-products-grid" id="featured-products">
@@ -509,6 +569,89 @@
       </div>
     </section>
     <!-- END: FeaturedProductsSection -->
+
+    <!-- BEGIN: IngredientsSpotlightSection -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="ingredients-spotlight-section" id="ingredients">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center space-x-2 text-teal-700 bg-teal-50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-seedling text-teal-600"></i>
+          <span>Pure Botanical Actives</span>
+        </div>
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+          Powered by Nature, Elevated by Science
+        </h2>
+        <p class="text-sm text-slate-500 leading-relaxed">
+          We harness biocompatible plant extracts and dermatological actives that work with your skin biology, never against it.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Deep Hydration</div>
+            <h3 class="font-playfair font-bold text-lg text-slate-900 mb-2">Triple Hyaluronic Acid</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Three molecular weights penetrate surface, mid, and deep dermal layers to attract and bind 1,000x its weight in moisture.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-slate-700">
+            Found in: <span class="text-teal-700">Hydra Glow Gel Cream</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Illuminating Actives</div>
+            <h3 class="font-playfair font-bold text-lg text-slate-900 mb-2">Niacinamide 5%</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Vitamin B3 visibly tightens enlarged pores, balances excess oil production, and fades post-blemish discoloration.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-slate-700">
+            Found in: <span class="text-teal-700">Radiance Boost Serum</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Barrier Healing</div>
+            <h3 class="font-playfair font-bold text-lg text-slate-900 mb-2">Centella Asiatica (Cica)</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Centuries-old healing herb rich in madecassoside that cools burning sensations, soothes redness, and speeds barrier repair.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-slate-700">
+            Found in: <span class="text-teal-700">Nourishing Night Cream</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Antioxidant Guard</div>
+            <h3 class="font-playfair font-bold text-lg text-slate-900 mb-2">Green Tea Polyphenols</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Potent EGCG bio-flavonoids neutralize free radical damage caused by UV exposure, smog, and daily blue light.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-slate-700">
+            Found in: <span class="text-teal-700">Daily UV Shield SPF 50</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: IngredientsSpotlightSection -->
 
     <!-- BEGIN: CustomerReviewsSection -->
     <section class="py-16 bg-[#eef7f4]/60 border-y border-teal-900/10" data-purpose="customer-reviews-section" id="reviews">
@@ -875,7 +1018,7 @@
         <a href="#" class="text-[#0e4643] border-b pb-2">HOME</a>
         <a href="#routine" class="hover:text-[#0e4643] border-b pb-2">ROUTINE</a>
         <a href="#featured-products" class="hover:text-[#0e4643] border-b pb-2">SHOP</a>
-        <a href="#shop" class="hover:text-[#0e4643] border-b pb-2">COLLECTIONS</a>
+        <a href="#ingredients" class="hover:text-[#0e4643] border-b pb-2">INGREDIENTS</a>
         <a href="#reviews" class="hover:text-[#0e4643] border-b pb-2">REVIEWS</a>
         <a href="#faq" class="hover:text-[#0e4643] border-b pb-2">FAQ</a>
       </nav>

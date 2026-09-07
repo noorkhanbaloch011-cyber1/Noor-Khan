@@ -15,6 +15,12 @@
         "video_btn_label": "Watch Video"
       }
     },
+    "press_logos": {
+      "type": "press-logos",
+      "settings": {
+        "title": "Featured In & Praised By"
+      }
+    },
     "value_props": {
       "type": "value-props",
       "blocks": {
@@ -119,12 +125,28 @@
         "subheading": "Carefully curated botanical steps designed to work in synergy for deep cellular hydration and radiant glow."
       }
     },
+    "clinical_results": {
+      "type": "clinical-results",
+      "settings": {
+        "eyebrow": "Science Backed Actives",
+        "heading": "Clinically Proven Botanical Results",
+        "subheading": "Based on an independent 4-week clinical consumer study with 120 diverse skin participants."
+      }
+    },
     "featured_products": {
       "type": "featured-products",
       "settings": {
         "heading": "Featured Products",
         "products_to_show": 4,
         "view_all_link": "#featured-products"
+      }
+    },
+    "ingredients_spotlight": {
+      "type": "ingredients-spotlight",
+      "settings": {
+        "eyebrow": "Pure Botanical Actives",
+        "heading": "Powered by Nature, Elevated by Science",
+        "subheading": "We harness biocompatible plant extracts and dermatological actives that work with your skin biology, never against it."
       }
     },
     "customer_reviews": {
@@ -168,10 +190,13 @@
   },
   "order": [
     "hero_banner",
+    "press_logos",
     "value_props",
     "category_grid",
     "skincare_routine",
+    "clinical_results",
     "featured_products",
+    "ingredients_spotlight",
     "customer_reviews",
     "promo_banner",
     "faq",
