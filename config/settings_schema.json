@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "name": "theme_info",
     "theme_name": "Glowérive Natural Skincare",
@@ -18,19 +18,19 @@
         "type": "color",
         "id": "color_teal",
         "label": "Primary Deep Teal",
-        "default": "#0e4643"
+        "default": "#146868"
       },
       {
         "type": "color",
         "id": "color_dark_teal",
         "label": "Dark Teal Accent",
-        "default": "#093634"
+        "default": "#095855"
       },
       {
         "type": "color",
         "id": "color_accent_teal",
         "label": "Light Accent Teal",
-        "default": "#1b635e"
+        "default": "#2d7a78"
       },
       {
         "type": "color",

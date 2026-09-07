@@ -1,27 +1,28 @@
 /* ==========================================================================
    Glowérive Natural Skincare — Base & Theme Stylesheet
-   Modern, Luxury Botanical Aesthetics
+   Exact Seafoam / Teal & Mint Luxury Color Palette
    ========================================================================== */
 
 :root {
-  --color-teal: #0e4643;
-  --color-dark-teal: #093634;
-  --color-accent-teal: #1b635e;
-  --color-mint: #e6f3f0;
+  --color-teal: #146868;
+  --color-dark-teal: #095855;
+  --color-accent-teal: #2d7a78;
+  --color-hero-mid: #5ba5a4;
+  --color-mint: #e6f5f3;
   --color-soft-bg: #f7fbf9;
   --color-gold: #d4a373;
   --color-text-main: #2b3938;
   --color-text-muted: #64748b;
   --color-white: #ffffff;
-  --color-border-light: rgba(14, 70, 67, 0.12);
+  --color-border-light: rgba(20, 104, 104, 0.12);
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   
-  --shadow-sm: 0 1px 3px rgba(14, 70, 67, 0.05);
-  --shadow-md: 0 4px 20px -2px rgba(14, 70, 67, 0.08);
-  --shadow-lg: 0 10px 30px -4px rgba(14, 70, 67, 0.12);
-  --shadow-glow: 0 0 25px rgba(27, 99, 94, 0.25);
+  --shadow-sm: 0 1px 3px rgba(20, 104, 104, 0.05);
+  --shadow-md: 0 4px 20px -2px rgba(20, 104, 104, 0.08);
+  --shadow-lg: 0 10px 30px -4px rgba(20, 104, 104, 0.12);
+  --shadow-glow: 0 0 25px rgba(67, 149, 146, 0.35);
   
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -110,7 +111,7 @@ input, select, textarea {
 
 /* Glow & Botanical Decorative Effects */
 .glow-overlay {
-  background: radial-gradient(circle at 75% 45%, rgba(175, 238, 238, 0.3) 0%, rgba(255, 255, 255, 0) 65%);
+  background: radial-gradient(circle at 75% 45%, rgba(175, 238, 238, 0.35) 0%, rgba(255, 255, 255, 0) 65%);
 }
 
 .ambient-blur {
@@ -136,7 +137,7 @@ input, select, textarea {
 .product-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(14, 70, 67, 0.15);
+  border-color: rgba(20, 104, 104, 0.25);
 }
 
 .product-card__image-box {
@@ -234,8 +235,8 @@ input, select, textarea {
   flex: 1;
   background-color: var(--color-teal);
   color: #ffffff;
-  padding: 0.65rem 0.85rem;
-  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -245,6 +246,7 @@ input, select, textarea {
   justify-content: center;
   gap: 0.4rem;
   box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
 }
 
 .btn-add-to-cart:hover {
@@ -256,7 +258,7 @@ input, select, textarea {
   width: 2.5rem;
   height: 2.5rem;
   border: 1px solid #e2e8f0;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,16 +279,15 @@ input, select, textarea {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  group: true;
 }
 
 .category-img-container {
   width: 6.5rem;
   height: 6.5rem;
   border-radius: var(--radius-full);
-  background-color: rgba(230, 243, 240, 0.8);
+  background-color: rgba(230, 245, 243, 0.8);
   padding: 0.35rem;
-  border: 2px solid #cce7e1;
+  border: 2px solid #bde6e0;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -333,7 +334,7 @@ input, select, textarea {
 .cart-drawer-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(9, 54, 52, 0.6);
+  background-color: rgba(9, 88, 85, 0.6);
   backdrop-filter: blur(4px);
   z-index: 9998;
   opacity: 0;
@@ -403,7 +404,7 @@ input, select, textarea {
 .free-shipping-bar {
   background-color: #f1f8f5;
   padding: 0.85rem 1.5rem;
-  border-bottom: 1px solid rgba(14, 70, 67, 0.08);
+  border-bottom: 1px solid rgba(20, 104, 104, 0.08);
 }
 
 .free-shipping-text {
@@ -423,7 +424,7 @@ input, select, textarea {
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #1b635e, #34d399);
+  background: linear-gradient(90deg, #146868, #4cdbc4);
   border-radius: var(--radius-full);
   transition: width 0.4s ease;
 }

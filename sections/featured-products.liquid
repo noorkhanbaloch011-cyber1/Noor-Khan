@@ -2,11 +2,11 @@
 <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="featured-products-grid" id="featured-products">
   <!-- Section Header with Title and 'View All' CTA -->
   <div class="flex items-center justify-between mb-8">
-    <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-[#0e4643] flex items-center gap-3">
+    <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-[#146868] flex items-center gap-3">
       {{ section.settings.heading | default: 'Featured Products' }}
       <span class="h-[1px] w-12 bg-slate-300 inline-block"></span>
     </h2>
-    <a class="text-xs font-bold tracking-widest text-[#0e4643] hover:text-teal-600 border border-[#0e4643]/30 px-4 py-2 rounded-full uppercase transition" href="{{ section.settings.view_all_link | default: '/collections/all' }}">
+    <a class="text-xs font-bold tracking-widest text-[#146868] hover:text-teal-700 border border-[#146868]/30 px-4 py-2 rounded-full uppercase transition" href="{{ section.settings.view_all_link | default: '/collections/all' }}">
       {{ 'general.view_all' | t | default: 'View All' }}
     </a>
   </div>

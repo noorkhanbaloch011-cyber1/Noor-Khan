@@ -1,5 +1,5 @@
 <!-- Main Header Section -->
-<header class="bg-[#0e4643] text-white sticky top-0 z-50 shadow-md" data-purpose="main-header">
+<header class="bg-[#146868] text-white sticky top-0 z-50 shadow-md" data-purpose="main-header">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
     <!-- Mobile Hamburger Toggle -->
     <div class="flex items-center md:hidden">
@@ -10,14 +10,14 @@
 
     <!-- Brand Logo -->
     <a class="flex items-center space-x-3 group" data-purpose="brand-logo" href="{{ routes.root_url | default: '/' }}">
-      <div class="w-10 h-10 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#15534f] text-teal-200 group-hover:scale-105 transition-transform">
+      <div class="w-10 h-10 rounded-full border border-teal-200/50 flex items-center justify-center bg-[#1d7d7d] text-teal-100 group-hover:scale-105 transition-transform">
         <i class="fa-solid fa-spa text-xl"></i>
       </div>
       <div>
         <span class="font-playfair text-2xl font-bold tracking-wider text-white block leading-none">
           {{ section.settings.brand_name | default: 'Glowérive' }}
         </span>
-        <span class="text-[9px] tracking-[0.25em] text-teal-300 font-semibold uppercase block mt-1">
+        <span class="text-[9px] tracking-[0.25em] text-teal-200 font-semibold uppercase block mt-1">
           {{ section.settings.tagline | default: 'Natural Skincare' }}
         </span>
       </div>
@@ -27,17 +27,17 @@
     <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-teal-100" data-purpose="desktop-nav">
       {%- if section.settings.menu != blank -%}
         {%- for link in linklists[section.settings.menu].links -%}
-          <a class="hover:text-teal-300 transition {% if link.active %}text-white border-b-2 border-teal-300 pb-1 font-bold{% endif %}" href="{{ link.url }}">
+          <a class="hover:text-white transition {% if link.active %}text-white border-b-2 border-teal-300 pb-1 font-bold{% endif %}" href="{{ link.url }}">
             {{ link.title | upcase }}
           </a>
         {%- endfor -%}
       {%- else -%}
-        <a class="text-white border-b-2 border-teal-300 pb-1 font-bold" href="/">HOME</a>
-        <a class="hover:text-teal-300 transition" href="#featured-products">SHOP</a>
-        <a class="hover:text-teal-300 transition" href="#shop">COLLECTIONS</a>
-        <a class="hover:text-teal-300 transition" href="#ingredients">INGREDIENTS</a>
-        <a class="hover:text-teal-300 transition" href="#about">ABOUT US</a>
-        <a class="hover:text-teal-300 transition" href="#blog">BLOG</a>
+        <a class="text-white border-b-2 border-white pb-1 font-bold" href="/">HOME</a>
+        <a class="hover:text-white transition" href="#featured-products">SHOP</a>
+        <a class="hover:text-white transition" href="#shop">COLLECTIONS</a>
+        <a class="hover:text-white transition" href="#ingredients">INGREDIENTS</a>
+        <a class="hover:text-white transition" href="#reviews">REVIEWS</a>
+        <a class="hover:text-white transition" href="#faq">FAQ</a>
       {%- endif -%}
     </nav>
 
@@ -51,7 +51,7 @@
       </a>
       <button type="button" aria-label="Shopping Cart" class="hover:text-white transition p-1 relative text-base" data-cart-trigger>
         <i class="fa-solid fa-bag-shopping"></i>
-        <span class="cart-count-badge absolute -top-1.5 -right-2 bg-teal-300 text-[#093634] font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+        <span class="cart-count-badge absolute -top-1.5 -right-2 bg-teal-200 text-[#095855] font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
           {{ cart.item_count | default: 2 }}
         </span>
       </button>

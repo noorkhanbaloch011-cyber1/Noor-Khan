@@ -1,10 +1,10 @@
 {
   "current": {
-    "color_teal": "#0e4643",
-    "color_dark_teal": "#093634",
-    "color_accent_teal": "#1b635e",
-    "color_mint": "#e6f3f0",
-    "color_bg_soft": "#f7fbf9",
+    "color_teal": "#146868",
+    "color_dark_teal": "#095855",
+    "color_accent_teal": "#2d7a78",
+    "color_mint": "#e6f5f3",
+    "color_soft_bg": "#f7fbf9",
     "color_gold": "#d4a373",
     "color_text_primary": "#2b3938",
     "cart_type": "drawer",
@@ -17,11 +17,11 @@
   },
   "presets": {
     "Default": {
-      "color_teal": "#0e4643",
-      "color_dark_teal": "#093634",
-      "color_accent_teal": "#1b635e",
-      "color_mint": "#e6f3f0",
-      "color_bg_soft": "#f7fbf9",
+      "color_teal": "#146868",
+      "color_dark_teal": "#095855",
+      "color_accent_teal": "#2d7a78",
+      "color_mint": "#e6f5f3",
+      "color_soft_bg": "#f7fbf9",
       "color_gold": "#d4a373",
       "color_text_primary": "#2b3938",
       "cart_type": "drawer",

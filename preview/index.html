@@ -22,10 +22,10 @@
         extend: {
           colors: {
             brand: {
-              teal: '#0e4643',
-              darkTeal: '#093634',
-              accentTeal: '#1b635e',
-              mint: '#e6f3f0',
+              teal: '#146868',
+              darkTeal: '#095855',
+              accentTeal: '#2d7a78',
+              mint: '#e6f5f3',
               softBg: '#f7fbf9',
               gold: '#d4a373',
               cream: '#fbf9f6'
@@ -43,10 +43,10 @@
   <!-- Theme Stylesheet -->
   <link rel="stylesheet" href="../assets/base.css">
 </head>
-<body class="bg-[#f7fbf9] text-slate-800 antialiased selection:bg-[#1b635e] selection:text-white">
+<body class="bg-[#f7fbf9] text-slate-800 antialiased selection:bg-[#2d7a78] selection:text-white">
 
   <!-- BEGIN: TopAnnouncementBar -->
-  <div class="bg-[#093634] text-teal-100 text-xs py-2 px-4 sm:px-8 border-b border-[#144c48]" data-purpose="top-announcement-bar">
+  <div class="bg-[#095855] text-teal-100 text-xs py-2 px-4 sm:px-8 border-b border-[#0f6f6b]" data-purpose="top-announcement-bar">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-2 font-medium">
         <i class="fa-solid fa-truck-fast text-teal-300"></i>
@@ -54,11 +54,11 @@
       </div>
       <div class="flex items-center space-x-6 text-[11px] tracking-wide text-teal-200">
         <a class="hover:text-white transition" href="#track-order">Track Order</a>
-        <span class="text-teal-600">|</span>
+        <span class="text-teal-500">|</span>
         <a class="hover:text-white transition" href="#faq">FAQ</a>
-        <span class="text-teal-600">|</span>
+        <span class="text-teal-500">|</span>
         <a class="hover:text-white transition" href="#store-locator">Store Locator</a>
-        <span class="text-teal-600">|</span>
+        <span class="text-teal-500">|</span>
         <a class="hover:text-white transition" href="#contact">Contact Us</a>
       </div>
     </div>
@@ -66,7 +66,7 @@
   <!-- END: TopAnnouncementBar -->
 
   <!-- BEGIN: MainHeader -->
-  <header class="bg-[#0e4643] text-white sticky top-0 z-50 shadow-md" data-purpose="main-header">
+  <header class="bg-[#146868] text-white sticky top-0 z-50 shadow-md" data-purpose="main-header">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
       <!-- Mobile Hamburger Toggle -->
       <div class="flex items-center md:hidden">
@@ -77,23 +77,24 @@
 
       <!-- Brand Logo -->
       <a class="flex items-center space-x-3 group" data-purpose="brand-logo" href="#">
-        <div class="w-10 h-10 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#15534f] text-teal-200 group-hover:scale-105 transition-transform">
+        <div class="w-10 h-10 rounded-full border border-teal-200/50 flex items-center justify-center bg-[#1d7d7d] text-teal-100 group-hover:scale-105 transition-transform">
           <i class="fa-solid fa-spa text-xl"></i>
         </div>
         <div>
           <span class="font-playfair text-2xl font-bold tracking-wider text-white block leading-none">Glowérive</span>
-          <span class="text-[9px] tracking-[0.25em] text-teal-300 font-semibold uppercase block mt-1">Natural Skincare</span>
+          <span class="text-[9px] tracking-[0.25em] text-teal-200 font-semibold uppercase block mt-1">Natural Skincare</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-teal-100" data-purpose="desktop-nav">
-        <a class="text-white border-b-2 border-teal-300 pb-1 font-bold" href="#">HOME</a>
-        <a class="hover:text-teal-300 transition" href="#routine">ROUTINE</a>
-        <a class="hover:text-teal-300 transition" href="#featured-products">SHOP</a>
-        <a class="hover:text-teal-300 transition" href="#ingredients">INGREDIENTS</a>
-        <a class="hover:text-teal-300 transition" href="#reviews">REVIEWS</a>
-        <a class="hover:text-teal-300 transition" href="#faq">FAQ</a>
+        <a class="text-white border-b-2 border-white pb-1 font-bold" href="#">HOME</a>
+        <a class="hover:text-white transition" href="#routine">ROUTINE</a>
+        <a class="hover:text-white transition" href="#featured-products">SHOP</a>
+        <a class="hover:text-white transition" href="#shop">COLLECTIONS</a>
+        <a class="hover:text-white transition" href="#ingredients">INGREDIENTS</a>
+        <a class="hover:text-white transition" href="#reviews">REVIEWS</a>
+        <a class="hover:text-white transition" href="#faq">FAQ</a>
       </nav>
 
       <!-- Action Icons (Search, Profile, Cart with Badge) -->
@@ -106,7 +107,7 @@
         </button>
         <button type="button" aria-label="Shopping Cart" class="hover:text-white transition p-1 relative text-base" data-cart-trigger>
           <i class="fa-solid fa-bag-shopping"></i>
-          <span class="cart-count-badge absolute -top-1.5 -right-2 bg-teal-300 text-[#093634] font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+          <span class="cart-count-badge absolute -top-1.5 -right-2 bg-teal-200 text-[#095855] font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
         </button>
       </div>
     </div>
@@ -115,45 +116,45 @@
 
   <main>
     <!-- BEGIN: HeroSection -->
-    <section class="relative bg-gradient-to-r from-[#0d4541] via-[#1b5e58] to-[#2c7771] text-white overflow-hidden pb-20 md:pb-24" data-purpose="hero-banner">
+    <section class="relative bg-gradient-to-r from-[#297270] via-[#439592] to-[#60b3ad] text-white overflow-hidden pb-16 md:pb-24" data-purpose="hero-banner">
       <div class="absolute inset-0 glow-overlay pointer-events-none"></div>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-6 space-y-6 text-left">
-          <div class="inline-flex items-center space-x-2 text-teal-300 tracking-[0.25em] text-xs font-bold uppercase">
-            <i class="fa-solid fa-leaf text-teal-400"></i>
+          <div class="inline-flex items-center space-x-2 text-teal-100 tracking-[0.25em] text-xs font-bold uppercase">
+            <i class="fa-solid fa-leaf text-teal-200"></i>
             <span>Naturally Radiant</span>
           </div>
           <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] text-white">
             Skincare <br/>
             that cares, <br/>
             beauty that <br/>
-            <span class="italic font-playfair font-medium text-teal-200">shines.</span>
+            <span class="italic font-playfair font-medium text-teal-100">shines.</span>
           </h1>
-          <p class="text-teal-100/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
+          <p class="text-teal-50/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
             Discover the perfect blend of nature and science for healthy, glowing skin every day.
           </p>
 
           <div class="pt-4 flex flex-wrap items-center gap-4">
-            <a class="inline-flex items-center space-x-3 bg-[#0a3532] hover:bg-[#072725] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-teal-500/40 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="#featured-products">
+            <a class="inline-flex items-center space-x-3 bg-[#146868] hover:bg-[#095855] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-white/20 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="#featured-products">
               <span>Shop Now</span>
               <i class="fa-solid fa-arrow-right-long text-sm"></i>
             </a>
-            <button type="button" class="inline-flex items-center space-x-3 text-white hover:text-teal-200 px-4 py-3 rounded-full text-xs font-semibold tracking-wider uppercase group transition" onclick="openVideoModal()">
-              <span class="w-8 h-8 rounded-full border border-teal-300/50 flex items-center justify-center group-hover:border-white transition">
-                <i class="fa-solid fa-play text-[10px] ml-0.5 text-teal-200 group-hover:text-white"></i>
+            <button type="button" class="inline-flex items-center space-x-3 text-white hover:text-teal-100 px-4 py-3 rounded-full text-xs font-semibold tracking-wider uppercase group transition" onclick="openVideoModal()">
+              <span class="w-8 h-8 rounded-full border border-teal-200/60 flex items-center justify-center group-hover:border-white transition">
+                <i class="fa-solid fa-play text-[10px] ml-0.5 text-teal-100 group-hover:text-white"></i>
               </span>
               <span>Watch Video</span>
             </button>
           </div>
         </div>
 
-        <!-- High-Fashion Skincare Model Image -->
+        <!-- High-Fashion Asian Skincare Model Image -->
         <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
           <div class="relative w-full max-w-lg">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/30">
-              <img alt="Radiant botanical skincare model with dewy glowing skin and fresh eucalyptus leaves" class="w-full h-[480px] sm:h-[560px] object-cover object-center" src="../assets/hero-model.jpg"/>
-              <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+              <img alt="Radiant Asian skincare model with glowing dewy skin, green leaves and water splash" class="w-full h-[480px] sm:h-[560px] object-cover object-center" src="../assets/hero-model.jpg"/>
+              <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-300/30 rounded-full blur-2xl pointer-events-none"></div>
             </div>
           </div>
         </div>
@@ -185,8 +186,8 @@
       <div class="bg-white rounded-2xl shadow-xl border border-gray-100/80 p-6 md:p-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           <div class="flex items-center space-x-3.5 pt-2 md:pt-0 md:px-3 first:pt-0">
-            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-leaf text-xl text-[#0e4643]"></i>
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#146868] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-leaf text-xl text-[#146868]"></i>
             </div>
             <div>
               <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Natural Ingredients</h4>
@@ -195,8 +196,8 @@
           </div>
 
           <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
-            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-flask-vial text-xl text-[#0e4643]"></i>
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#146868] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-flask-vial text-xl text-[#146868]"></i>
             </div>
             <div>
               <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Dermatologist Tested</h4>
@@ -205,8 +206,8 @@
           </div>
 
           <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
-            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-droplet text-xl text-[#0e4643]"></i>
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#146868] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-droplet text-xl text-[#146868]"></i>
             </div>
             <div>
               <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Paraben & Sulfate Free</h4>
@@ -215,8 +216,8 @@
           </div>
 
           <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
-            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
-              <i class="fa-solid fa-heart text-xl text-[#0e4643]"></i>
+            <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#146868] flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-heart text-xl text-[#146868]"></i>
             </div>
             <div>
               <h4 class="font-bold text-xs sm:text-sm text-slate-900 leading-tight">Cruelty Free</h4>
@@ -232,7 +233,7 @@
     <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8 text-center" data-purpose="category-section" id="shop">
       <div class="flex items-center justify-center space-x-4 mb-10">
         <span class="h-[1px] w-12 bg-slate-300"></span>
-        <h2 class="text-xs sm:text-sm tracking-[0.25em] font-bold text-[#0e4643] uppercase">Shop by Category</h2>
+        <h2 class="text-xs sm:text-sm tracking-[0.25em] font-bold text-[#146868] uppercase">Shop by Category</h2>
         <span class="h-[1px] w-12 bg-slate-300"></span>
       </div>
 
@@ -295,7 +296,7 @@
           <i class="fa-solid fa-sparkles text-teal-600"></i>
           <span>Your Daily Ritual</span>
         </div>
-        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#146868] mb-3">
           The 5-Step Glow Routine
         </h2>
         <p class="text-sm text-slate-500 leading-relaxed">
@@ -393,11 +394,11 @@
     <!-- END: SkincareRoutineSection -->
 
     <!-- BEGIN: ClinicalResultsSection -->
-    <section class="py-16 bg-[#0e4643] text-white relative overflow-hidden" data-purpose="clinical-results-section">
+    <section class="py-16 bg-[#146868] text-white relative overflow-hidden" data-purpose="clinical-results-section">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         <div class="text-center max-w-2xl mx-auto mb-12">
-          <div class="inline-flex items-center space-x-2 text-teal-300 bg-teal-900/50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3 border border-teal-500/20">
-            <i class="fa-solid fa-microscope text-teal-400"></i>
+          <div class="inline-flex items-center space-x-2 text-teal-200 bg-teal-900/50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3 border border-teal-400/20">
+            <i class="fa-solid fa-microscope text-teal-300"></i>
             <span>Science Backed Actives</span>
           </div>
           <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-white mb-3">
@@ -409,28 +410,28 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
-            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">98%</div>
+          <div class="bg-[#1b7373] rounded-2xl p-6 border border-teal-300/20 text-center hover:border-teal-200/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-100 mb-2">98%</div>
             <div class="text-xs sm:text-sm font-semibold text-white mb-1">Radiance Boost</div>
-            <p class="text-[11px] text-teal-200/70 font-light">Saw visible boost in natural luminosity within 7 days.</p>
+            <p class="text-[11px] text-teal-100/70 font-light">Saw visible boost in natural luminosity within 7 days.</p>
           </div>
 
-          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
-            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">94%</div>
+          <div class="bg-[#1b7373] rounded-2xl p-6 border border-teal-300/20 text-center hover:border-teal-200/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-100 mb-2">94%</div>
             <div class="text-xs sm:text-sm font-semibold text-white mb-1">Deep Hydration</div>
-            <p class="text-[11px] text-teal-200/70 font-light">Reported 72-hour continuous moisture retention.</p>
+            <p class="text-[11px] text-teal-100/70 font-light">Reported 72-hour continuous moisture retention.</p>
           </div>
 
-          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
-            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">92%</div>
+          <div class="bg-[#1b7373] rounded-2xl p-6 border border-teal-300/20 text-center hover:border-teal-200/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-100 mb-2">92%</div>
             <div class="text-xs sm:text-sm font-semibold text-white mb-1">Barrier Calm</div>
-            <p class="text-[11px] text-teal-200/70 font-light">Noticed visibly reduced redness and zero irritation.</p>
+            <p class="text-[11px] text-teal-100/70 font-light">Noticed visibly reduced redness and zero irritation.</p>
           </div>
 
-          <div class="bg-[#124f4b] rounded-2xl p-6 border border-teal-400/20 text-center hover:border-teal-300/40 transition">
-            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-200 mb-2">100%</div>
+          <div class="bg-[#1b7373] rounded-2xl p-6 border border-teal-300/20 text-center hover:border-teal-200/40 transition">
+            <div class="font-playfair text-4xl sm:text-5xl font-bold text-teal-100 mb-2">100%</div>
             <div class="text-xs sm:text-sm font-semibold text-white mb-1">Clean & Vegan</div>
-            <p class="text-[11px] text-teal-200/70 font-light">Formulated without parabens, sulfates, or artificial dye.</p>
+            <p class="text-[11px] text-teal-100/70 font-light">Formulated without parabens, sulfates, or artificial dye.</p>
           </div>
         </div>
       </div>
@@ -440,11 +441,11 @@
     <!-- BEGIN: FeaturedProductsSection -->
     <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="featured-products-grid" id="featured-products">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-[#0e4643] flex items-center gap-3">
+        <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-[#146868] flex items-center gap-3">
           Featured Products
           <span class="h-[1px] w-12 bg-slate-300 inline-block"></span>
         </h2>
-        <a class="text-xs font-bold tracking-widest text-[#0e4643] hover:text-teal-600 border border-[#0e4643]/30 px-4 py-2 rounded-full uppercase transition" href="#all-products">
+        <a class="text-xs font-bold tracking-widest text-[#146868] hover:text-teal-700 border border-[#146868]/30 px-4 py-2 rounded-full uppercase transition" href="#all-products">
           View All
         </a>
       </div>
@@ -577,7 +578,7 @@
           <i class="fa-solid fa-seedling text-teal-600"></i>
           <span>Pure Botanical Actives</span>
         </div>
-        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#146868] mb-3">
           Powered by Nature, Elevated by Science
         </h2>
         <p class="text-sm text-slate-500 leading-relaxed">
@@ -588,7 +589,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#146868] flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-droplet"></i>
             </div>
             <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Deep Hydration</div>
@@ -604,7 +605,7 @@
 
         <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#146868] flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-sun"></i>
             </div>
             <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Illuminating Actives</div>
@@ -620,7 +621,7 @@
 
         <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#146868] flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-shield-heart"></i>
             </div>
             <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Barrier Healing</div>
@@ -636,7 +637,7 @@
 
         <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#0e4643] flex items-center justify-center text-xl mb-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#146868] flex items-center justify-center text-xl mb-4">
               <i class="fa-solid fa-leaf"></i>
             </div>
             <div class="text-[10px] uppercase font-bold tracking-widest text-teal-700 mb-1">Antioxidant Guard</div>
@@ -661,7 +662,7 @@
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <span class="text-slate-700 text-xs font-bold ml-1">4.9 / 5.0</span>
           </div>
-          <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+          <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#146868] mb-3">
             Loved by 10,000+ Radiant Faces
           </h2>
           <p class="text-sm text-slate-500 leading-relaxed">
@@ -808,7 +809,7 @@
           <i class="fa-solid fa-circle-question text-teal-600"></i>
           <span>Got Questions?</span>
         </div>
-        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#146868] mb-3">
           Frequently Asked Questions
         </h2>
         <p class="text-sm text-slate-500 leading-relaxed">
@@ -820,7 +821,7 @@
         <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30" open>
           <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
             <span>Are Glowérive formulas safe for sensitive skin?</span>
-            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#146868] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#146868] group-open:text-white">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </summary>
@@ -832,7 +833,7 @@
         <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
           <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
             <span>How fast is shipping and is it free?</span>
-            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#146868] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#146868] group-open:text-white">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </summary>
@@ -844,7 +845,7 @@
         <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
           <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
             <span>Are your products 100% cruelty-free and vegan?</span>
-            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#146868] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#146868] group-open:text-white">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </summary>
@@ -856,7 +857,7 @@
         <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
           <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
             <span>In what order should I apply the products?</span>
-            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#146868] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#146868] group-open:text-white">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </summary>
@@ -868,7 +869,7 @@
         <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
           <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
             <span>What is your 30-Day Money-Back Guarantee?</span>
-            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#146868] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#146868] group-open:text-white">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </summary>
@@ -884,7 +885,7 @@
     <section class="border-t border-slate-200/80 bg-white py-8 mt-6" data-purpose="trust-badges">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="flex items-center space-x-3">
-          <div class="text-[#0e4643] text-2xl">
+          <div class="text-[#146868] text-2xl">
             <i class="fa-solid fa-truck"></i>
           </div>
           <div>
@@ -894,7 +895,7 @@
         </div>
 
         <div class="flex items-center space-x-3">
-          <div class="text-[#0e4643] text-2xl">
+          <div class="text-[#146868] text-2xl">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
           <div>
@@ -904,7 +905,7 @@
         </div>
 
         <div class="flex items-center space-x-3">
-          <div class="text-[#0e4643] text-2xl">
+          <div class="text-[#146868] text-2xl">
             <i class="fa-solid fa-arrows-rotate"></i>
           </div>
           <div>
@@ -914,7 +915,7 @@
         </div>
 
         <div class="flex items-center space-x-3">
-          <div class="text-[#0e4643] text-2xl">
+          <div class="text-[#146868] text-2xl">
             <i class="fa-solid fa-headset"></i>
           </div>
           <div>
@@ -928,14 +929,14 @@
   </main>
 
   <!-- BEGIN: SiteFooter -->
-  <footer class="bg-[#093634] text-teal-200/70 text-xs py-10 border-t border-teal-900">
+  <footer class="bg-[#095855] text-teal-200/70 text-xs py-10 border-t border-teal-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded-full border border-teal-400/30 flex items-center justify-center text-teal-300">
+        <div class="w-8 h-8 rounded-full border border-teal-400/30 flex items-center justify-center text-teal-200">
           <i class="fa-solid fa-spa text-sm"></i>
         </div>
         <span class="font-playfair font-bold text-white text-base tracking-wider">Glowérive</span>
-        <span class="text-teal-400/60 ml-2 text-[11px]">© 2026 Glowérive Skincare. All rights reserved.</span>
+        <span class="text-teal-300/60 ml-2 text-[11px]">© 2026 Glowérive Skincare. All rights reserved.</span>
       </div>
       <div class="flex items-center space-x-6 text-[11px]">
         <a class="hover:text-white transition" href="#privacy">Privacy Policy</a>
@@ -1004,7 +1005,7 @@
   <div id="mobile-menu-drawer" class="cart-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
     <div class="cart-drawer__header">
       <div class="flex items-center space-x-2">
-        <div class="w-8 h-8 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#15534f] text-teal-200">
+        <div class="w-8 h-8 rounded-full border border-teal-300/40 flex items-center justify-center bg-[#1d7d7d] text-teal-100">
           <i class="fa-solid fa-spa"></i>
         </div>
         <span class="font-playfair text-xl font-bold tracking-wider text-white">Glowérive</span>
@@ -1015,12 +1016,12 @@
     </div>
     <div class="p-6 space-y-4">
       <nav class="flex flex-col space-y-4 text-sm font-semibold tracking-wider text-slate-800">
-        <a href="#" class="text-[#0e4643] border-b pb-2">HOME</a>
-        <a href="#routine" class="hover:text-[#0e4643] border-b pb-2">ROUTINE</a>
-        <a href="#featured-products" class="hover:text-[#0e4643] border-b pb-2">SHOP</a>
-        <a href="#ingredients" class="hover:text-[#0e4643] border-b pb-2">INGREDIENTS</a>
-        <a href="#reviews" class="hover:text-[#0e4643] border-b pb-2">REVIEWS</a>
-        <a href="#faq" class="hover:text-[#0e4643] border-b pb-2">FAQ</a>
+        <a href="#" class="text-[#146868] border-b pb-2">HOME</a>
+        <a href="#routine" class="hover:text-[#146868] border-b pb-2">ROUTINE</a>
+        <a href="#featured-products" class="hover:text-[#146868] border-b pb-2">SHOP</a>
+        <a href="#ingredients" class="hover:text-[#146868] border-b pb-2">INGREDIENTS</a>
+        <a href="#reviews" class="hover:text-[#146868] border-b pb-2">REVIEWS</a>
+        <a href="#faq" class="hover:text-[#146868] border-b pb-2">FAQ</a>
       </nav>
     </div>
   </div>

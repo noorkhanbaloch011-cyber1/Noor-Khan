@@ -1,4 +1,4 @@
-# Glowérive Natural Skincare — Shopify Online Store 2.0 Theme
+﻿# Glowérive Natural Skincare — Shopify Online Store 2.0 Theme
 
 > **"Skincare that cares, beauty that shines."**  
 > A luxury, high-conversion Shopify Online Store 2.0 theme crafted for modern botanical, clean beauty, and organic skincare brands.
@@ -8,7 +8,7 @@
 ## 🌿 Theme Highlights
 
 - **Shopify Online Store 2.0 Compliant**: Built with standard Liquid templates, dynamic sections, block architectures, and customizable settings schema.
-- **Deep Emerald & Mint Palette**: Signature colors `#0e4643`, `#093634`, `#1b635e`, `#e6f3f0`, `#f7fbf9`, and warm gold `#d4a373`.
+- **Deep Emerald & Mint Palette**: Signature colors `#146868`, `#095855`, `#2d7a78`, `#e6f3f0`, `#f7fbf9`, and warm gold `#d4a373`.
 - **Typography**: Paired with Google Fonts *Playfair Display* (luxury editorial serif) and *Plus Jakarta Sans* (clean geometric sans-serif).
 - **Interactive Slide-Out AJAX Cart Drawer**: Dynamic quantity controls, instant item removal, subtotal calculation, and a live "Free Shipping over $50" progress bar.
 - **Shop by Category Rings**: Circular category tiles with smooth hover scale effects and active borders.

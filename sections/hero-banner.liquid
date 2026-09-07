@@ -1,13 +1,13 @@
 <!-- Hero Banner Section -->
-<section class="relative bg-gradient-to-r from-[#0d4541] via-[#1b5e58] to-[#2c7771] text-white overflow-hidden pb-20 md:pb-24" data-purpose="hero-banner">
+<section class="relative bg-gradient-to-r from-[#297270] via-[#439592] to-[#60b3ad] text-white overflow-hidden pb-16 md:pb-24" data-purpose="hero-banner">
   <!-- Background Ambient Glow Overlay -->
   <div class="absolute inset-0 glow-overlay pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     <!-- Hero Text Content -->
     <div class="lg:col-span-6 space-y-6 text-left">
-      <div class="inline-flex items-center space-x-2 text-teal-300 tracking-[0.25em] text-xs font-bold uppercase">
-        <i class="fa-solid fa-leaf text-teal-400"></i>
+      <div class="inline-flex items-center space-x-2 text-teal-100 tracking-[0.25em] text-xs font-bold uppercase">
+        <i class="fa-solid fa-leaf text-teal-200"></i>
         <span>{{ section.settings.eyebrow | default: 'Naturally Radiant' }}</span>
       </div>
 
@@ -15,24 +15,24 @@
         {{ section.settings.heading_line1 | default: 'Skincare' }} <br/>
         {{ section.settings.heading_line2 | default: 'that cares,' }} <br/>
         {{ section.settings.heading_line3 | default: 'beauty that' }} <br/>
-        <span class="italic font-playfair font-medium text-teal-200">{{ section.settings.heading_italic | default: 'shines.' }}</span>
+        <span class="italic font-playfair font-medium text-teal-100">{{ section.settings.heading_italic | default: 'shines.' }}</span>
       </h1>
 
-      <p class="text-teal-100/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
+      <p class="text-teal-50/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
         {{ section.settings.subheading | default: 'Discover the perfect blend of nature and science for healthy, glowing skin every day.' }}
       </p>
 
       <!-- Action Buttons -->
       <div class="pt-4 flex flex-wrap items-center gap-4">
-        <a class="inline-flex items-center space-x-3 bg-[#0a3532] hover:bg-[#072725] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-teal-500/40 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="{{ section.settings.btn_link | default: '#featured-products' }}">
+        <a class="inline-flex items-center space-x-3 bg-[#146868] hover:bg-[#095855] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-white/20 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="{{ section.settings.btn_link | default: '#featured-products' }}">
           <span>{{ section.settings.btn_label | default: 'Shop Now' }}</span>
           <i class="fa-solid fa-arrow-right-long text-sm"></i>
         </a>
 
         {%- if section.settings.show_video_btn -%}
-          <button type="button" class="inline-flex items-center space-x-3 text-white hover:text-teal-200 px-4 py-3 rounded-full text-xs font-semibold tracking-wider uppercase group transition" onclick="openVideoModal()">
-            <span class="w-8 h-8 rounded-full border border-teal-300/50 flex items-center justify-center group-hover:border-white transition">
-              <i class="fa-solid fa-play text-[10px] ml-0.5 text-teal-200 group-hover:text-white"></i>
+          <button type="button" class="inline-flex items-center space-x-3 text-white hover:text-teal-100 px-4 py-3 rounded-full text-xs font-semibold tracking-wider uppercase group transition" onclick="openVideoModal()">
+            <span class="w-8 h-8 rounded-full border border-teal-200/60 flex items-center justify-center group-hover:border-white transition">
+              <i class="fa-solid fa-play text-[10px] ml-0.5 text-teal-100 group-hover:text-white"></i>
             </span>
             <span>{{ section.settings.video_btn_label | default: 'Watch Video' }}</span>
           </button>
@@ -43,7 +43,7 @@
     <!-- Hero Skincare Model Image -->
     <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
       <div class="relative w-full max-w-lg">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/30">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20">
           {%- if section.settings.hero_image != blank -%}
             <img 
               alt="{{ section.settings.hero_image.alt | default: 'Radiant botanical skincare model' | escape }}" 
@@ -53,14 +53,14 @@
             />
           {%- else -%}
             <img 
-              alt="Radiant skincare model with glowing dewy skin and botanical eucalyptus leaves" 
+              alt="Radiant Asian skincare model with glowing dewy skin, green leaves and water splash" 
               class="w-full h-[480px] sm:h-[560px] object-cover object-center" 
               src="{{ 'hero-model.jpg' | asset_url }}" 
               loading="eager"
             />
           {%- endif -%}
           <!-- Ambient mint leaf accent overlay -->
-          <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-300/30 rounded-full blur-2xl pointer-events-none"></div>
         </div>
       </div>
     </div>
