@@ -89,16 +89,16 @@
       <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-teal-100" data-purpose="desktop-nav">
         <a class="text-white border-b-2 border-teal-300 pb-1 font-bold" href="#">HOME</a>
+        <a class="hover:text-teal-300 transition" href="#routine">ROUTINE</a>
         <a class="hover:text-teal-300 transition" href="#featured-products">SHOP</a>
         <a class="hover:text-teal-300 transition" href="#shop">COLLECTIONS</a>
-        <a class="hover:text-teal-300 transition" href="#ingredients">INGREDIENTS</a>
-        <a class="hover:text-teal-300 transition" href="#about">ABOUT US</a>
-        <a class="hover:text-teal-300 transition" href="#blog">BLOG</a>
+        <a class="hover:text-teal-300 transition" href="#reviews">REVIEWS</a>
+        <a class="hover:text-teal-300 transition" href="#faq">FAQ</a>
       </nav>
 
       <!-- Action Icons (Search, Profile, Cart with Badge) -->
       <div class="flex items-center space-x-5 text-teal-100">
-        <button type="button" aria-label="Search" class="hover:text-white transition p-1 text-base" onclick="showToast('Search functionality initialized')">
+        <button type="button" aria-label="Search" class="hover:text-white transition p-1 text-base" onclick="showToast('Search ready')">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button type="button" aria-label="Account" class="hover:text-white transition p-1 text-base" onclick="showToast('Customer account area ready')">
@@ -116,11 +116,9 @@
   <main>
     <!-- BEGIN: HeroSection -->
     <section class="relative bg-gradient-to-r from-[#0d4541] via-[#1b5e58] to-[#2c7771] text-white overflow-hidden pb-20 md:pb-24" data-purpose="hero-banner">
-      <!-- Background Ambient Glow Overlay -->
       <div class="absolute inset-0 glow-overlay pointer-events-none"></div>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Hero Text Content -->
         <div class="lg:col-span-6 space-y-6 text-left">
           <div class="inline-flex items-center space-x-2 text-teal-300 tracking-[0.25em] text-xs font-bold uppercase">
             <i class="fa-solid fa-leaf text-teal-400"></i>
@@ -136,7 +134,6 @@
             Discover the perfect blend of nature and science for healthy, glowing skin every day.
           </p>
 
-          <!-- Action Buttons -->
           <div class="pt-4 flex flex-wrap items-center gap-4">
             <a class="inline-flex items-center space-x-3 bg-[#0a3532] hover:bg-[#072725] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-teal-500/40 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="#featured-products">
               <span>Shop Now</span>
@@ -151,12 +148,10 @@
           </div>
         </div>
 
-        <!-- Hero Skincare Model Image -->
         <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
           <div class="relative w-full max-w-lg">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-300/20">
               <img alt="Radiant skincare model showcasing healthy glowing skin with botanical water splashes" class="w-full h-[460px] sm:h-[540px] object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBidVnZgeOyVsiB1AAhsA2ASW2LfrNev5YVj_JZO1_VjehLdfVeaSk-qGORNan29tmqoyf0zQa-_d-O3QGHtyJrtqwSsGnv8E2uGze3No6vFQjPupqngQPxBMnUoEhqx85Cb9WX3Z7zmGhgmWF7V81BlwlQTHuqAfPKWG_HR4tAysO28EztkUt0RZe_Ud7RkV-mS62hSCER-JMAIrv_1M7n4W-af2i6zmnF9hTvRFTiIWrAimrJ27pONg"/>
-              <!-- Ambient mint leaf accent overlay simulation -->
               <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none"></div>
             </div>
           </div>
@@ -169,7 +164,6 @@
     <div class="relative z-20 max-w-6xl mx-auto px-4 -mt-16 mb-8" data-purpose="value-props">
       <div class="bg-white rounded-2xl shadow-xl border border-gray-100/80 p-6 md:p-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-          <!-- Prop 1: Natural Ingredients -->
           <div class="flex items-center space-x-3.5 pt-2 md:pt-0 md:px-3 first:pt-0">
             <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
               <i class="fa-solid fa-leaf text-xl text-[#0e4643]"></i>
@@ -180,7 +174,6 @@
             </div>
           </div>
 
-          <!-- Prop 2: Dermatologist Tested -->
           <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
             <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
               <i class="fa-solid fa-flask-vial text-xl text-[#0e4643]"></i>
@@ -191,7 +184,6 @@
             </div>
           </div>
 
-          <!-- Prop 3: Paraben & Sulfate Free -->
           <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
             <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
               <i class="fa-solid fa-droplet text-xl text-[#0e4643]"></i>
@@ -202,7 +194,6 @@
             </div>
           </div>
 
-          <!-- Prop 4: Cruelty Free -->
           <div class="flex items-center space-x-3.5 pt-4 md:pt-0 md:px-3">
             <div class="w-12 h-12 rounded-xl bg-teal-50/80 text-[#0e4643] flex items-center justify-center flex-shrink-0">
               <i class="fa-solid fa-heart text-xl text-[#0e4643]"></i>
@@ -226,7 +217,6 @@
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
-        <!-- Category 1: Serums -->
         <a class="group category-ring flex flex-col items-center" href="#category-serums">
           <div class="category-img-container">
             <img alt="Serums" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWiL9l1lYUyGNWQiHoox8caFjvCDsNS80Fq574H1GqyUPcqlkdsvv2I6Ch_Gm5mDxywgEbXhtAVAd8sQQthSRqrMIDl5B2hA3Q6CS9oBC_KOhCORxu3pwkDaw_zh9Sp8MwjdTiYHr0nsiTVzxCbS8NzBwiRcVojZ-YL_K7tVYGlX16x1kkP4UsRVVhaqidMK1puUZTcSab4c-uR5CkA4Xt6IyyZgSZQvzeTjvKFYva0IYQUiy2fL3lw"/>
@@ -235,7 +225,6 @@
           <span class="category-subtitle">Explore</span>
         </a>
 
-        <!-- Category 2: Moisturizers -->
         <a class="group category-ring flex flex-col items-center" href="#category-moisturizers">
           <div class="category-img-container">
             <img alt="Moisturizers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6DuL_vNcZjV6655Xtf6PQ49rJae0easENf8pl7ErOaLoB6VAemQ7aTmE-DbW8DoxPSxcRA7X1sY3q8naPSq2DxnxKE648Um50WkeSQwrq2o-4p6gb3LRxebrQ6taYJJ8QfTByH5R9kwlTZXXMUTvOF6-8VWCu5TgQz8Ieo-UjJy_LFIGmP6Q0Vs1TkArSLyHdFL1JUn9PtD7Gilssd77Or1NOALyBpvAxr8HY9kx7o_AVKUIS2sxH9A"/>
@@ -244,7 +233,6 @@
           <span class="category-subtitle">Explore</span>
         </a>
 
-        <!-- Category 3: Cleansers -->
         <a class="group category-ring flex flex-col items-center" href="#category-cleansers">
           <div class="category-img-container">
             <img alt="Cleansers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Q6EKwGCCBoGf_M7w3DScThFyTCQ4BiltZETVjuBeOw8INfyeXE5DGpWGS-16BVFQzNaBEJYhWnwY-3mf-uPV-E0MLfAw79rpdwzpuUJg8zhOCsBGXKjpHT22sD7gjsZqK1gOD-Iy-pp0ehOPZpHGk0-NBZOF9dqORRNx0vIgLdqn5XV2RDELUtA69sGcEqhmV9HnJ6eNf8824FsYT1o8hZvtHMFVIE41UAmWPoKn-KsxzhIr3GpX4A"/>
@@ -253,7 +241,6 @@
           <span class="category-subtitle">Explore</span>
         </a>
 
-        <!-- Category 4: Toners -->
         <a class="group category-ring flex flex-col items-center" href="#category-toners">
           <div class="category-img-container">
             <img alt="Toners" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3fw8c2SWUYJWL_h6uIKWE61-ZODfH2vb42M1qswdXs4kLjX0glNR4qeyPRs-CVoFFV_N8VPkGBhksQL-CFNCikcPctr9ekOwFU95Oq5QngbwPxBUJqPumDrYgP7DNwp5qRxEPDUnV40NQmc804yL-xptbxZbZl_CSX6D0AL1sitrOyE7Eo7u_tombpR_T2HDyJ8EEdT5RAS0IKgEm7tnzw5LnqHaAJwbnHv1ohue34WONGiJotnQZg"/>
@@ -262,7 +249,6 @@
           <span class="category-subtitle">Explore</span>
         </a>
 
-        <!-- Category 5: Eye Care -->
         <a class="group category-ring flex flex-col items-center" href="#category-eyecare">
           <div class="category-img-container">
             <img alt="Eye Care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDJN2wVdLq7SQpihPuTuZzrwKPFltF4dOigoKJwo3cagyQuUqVCPeK6WzzR3uGRIUIHyF75KQL_TJOOX4_cjbIt9Mp_CYPhRtO-oGKD_-7xEcfT1r_oantBo7ATtBYg5JC6DIDURcVr5TH95cYMgIYW_sZcGeMRdDBcSuNHjwMXpdFF6hKe9yV1CEvuAE91u15DeQvxOsnlnH4hj8SSL_uLXkPcqghdmP8PeOEVEAhw1EcU2eMmYwOhA"/>
@@ -271,7 +257,6 @@
           <span class="category-subtitle">Explore</span>
         </a>
 
-        <!-- Category 6: Sun Care -->
         <a class="group category-ring flex flex-col items-center" href="#category-suncare">
           <div class="category-img-container">
             <img alt="Sun Care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkqsQuUhoM_laI0u51NEEY2QTpfUKH7nxGuUcVAOPvBImBTpl5Jg0wh1OGj3PcLfVJ5fVOzZgTjaTUenUyGaZQi_RP7tt6025GEtIMZO3ScWgzaawIzMM25FeWYu-E2O6-rswdBWXz0YeCsbsKG5LX28oYK6vBWF9HOCeLFe1jZhpaE8BvZN05J962AqDraD2Pk3nVQ-zDhfpJQmS2nCAtRokav-x1_UyRzY1wJGGaIOLXHrtU9tqMxw"/>
@@ -282,6 +267,115 @@
       </div>
     </section>
     <!-- END: ShopByCategorySection -->
+
+    <!-- BEGIN: SkincareRoutineSection -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="skincare-routine-section" id="routine">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center space-x-2 text-teal-700 bg-teal-50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-sparkles text-teal-600"></i>
+          <span>Your Daily Ritual</span>
+        </div>
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+          The 5-Step Glow Routine
+        </h2>
+        <p class="text-sm text-slate-500 leading-relaxed">
+          Carefully curated botanical steps designed to work in synergy for deep cellular hydration and radiant glow.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold font-playfair text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full">Step 01</span>
+              <span class="text-slate-400 text-xs uppercase font-bold">Cleanse</span>
+            </div>
+            <div class="w-full aspect-square bg-[#f1f8f5] rounded-xl overflow-hidden mb-4 flex items-center justify-center p-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Q6EKwGCCBoGf_M7w3DScThFyTCQ4BiltZETVjuBeOw8INfyeXE5DGpWGS-16BVFQzNaBEJYhWnwY-3mf-uPV-E0MLfAw79rpdwzpuUJg8zhOCsBGXKjpHT22sD7gjsZqK1gOD-Iy-pp0ehOPZpHGk0-NBZOF9dqORRNx0vIgLdqn5XV2RDELUtA69sGcEqhmV9HnJ6eNf8824FsYT1o8hZvtHMFVIE41UAmWPoKn-KsxzhIr3GpX4A" alt="Cleanse" class="max-h-28 object-contain" />
+            </div>
+            <h3 class="font-playfair font-bold text-base text-slate-900 mb-1.5">Gentle Purifying Cleanser</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-4">Removes impurities and pollutants while protecting the delicate skin barrier.</p>
+          </div>
+          <a href="#featured-products" class="text-[11px] font-bold tracking-wider text-teal-700 hover:text-teal-900 flex items-center space-x-1 uppercase pt-2 border-t border-slate-100">
+            <span>Shop Step</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold font-playfair text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full">Step 02</span>
+              <span class="text-slate-400 text-xs uppercase font-bold">Tone</span>
+            </div>
+            <div class="w-full aspect-square bg-[#f1f8f5] rounded-xl overflow-hidden mb-4 flex items-center justify-center p-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3fw8c2SWUYJWL_h6uIKWE61-ZODfH2vb42M1qswdXs4kLjX0glNR4qeyPRs-CVoFFV_N8VPkGBhksQL-CFNCikcPctr9ekOwFU95Oq5QngbwPxBUJqPumDrYgP7DNwp5qRxEPDUnV40NQmc804yL-xptbxZbZl_CSX6D0AL1sitrOyE7Eo7u_tombpR_T2HDyJ8EEdT5RAS0IKgEm7tnzw5LnqHaAJwbnHv1ohue34WONGiJotnQZg" alt="Tone" class="max-h-28 object-contain" />
+            </div>
+            <h3 class="font-playfair font-bold text-base text-slate-900 mb-1.5">Balancing Floral Toner</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-4">Restores natural skin pH balance and readies skin for deep serum penetration.</p>
+          </div>
+          <a href="#featured-products" class="text-[11px] font-bold tracking-wider text-teal-700 hover:text-teal-900 flex items-center space-x-1 uppercase pt-2 border-t border-slate-100">
+            <span>Shop Step</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold font-playfair text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full">Step 03</span>
+              <span class="text-slate-400 text-xs uppercase font-bold">Treat</span>
+            </div>
+            <div class="w-full aspect-square bg-[#f1f8f5] rounded-xl overflow-hidden mb-4 flex items-center justify-center p-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5aB2COJAeOvOLGaZOry1CD5mRizrITc_qdwIGqDU-C6qec2dGL46k-CRKXWx9qRaAY93KhXeISPD5OrVZ7byUp_KUFHW5Q6EJmeyR1UmlIL_cfDjDcSMby568yeJXfy3DGKr8zVEVXn7vhPgwx_hr_nGYiHD8Kg4lG9ULWbmy1ed009fgTjeziwtSIkBezbCnE176ZGDTdzjcU0DYb0lJO9MwW7HnsUD8GsHqOgAywTrOF6WaNkvDQ" alt="Treat" class="max-h-28 object-contain" />
+            </div>
+            <h3 class="font-playfair font-bold text-base text-slate-900 mb-1.5">Radiance Boost Serum</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-4">Concentrated botanical antioxidants that brighten dullness and smooth texture.</p>
+          </div>
+          <a href="#featured-products" class="text-[11px] font-bold tracking-wider text-teal-700 hover:text-teal-900 flex items-center space-x-1 uppercase pt-2 border-t border-slate-100">
+            <span>Shop Step</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold font-playfair text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full">Step 04</span>
+              <span class="text-slate-400 text-xs uppercase font-bold">Moisturize</span>
+            </div>
+            <div class="w-full aspect-square bg-[#f1f8f5] rounded-xl overflow-hidden mb-4 flex items-center justify-center p-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA" alt="Moisturize" class="max-h-28 object-contain" />
+            </div>
+            <h3 class="font-playfair font-bold text-base text-slate-900 mb-1.5">Hydra Glow Gel Cream</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-4">Locks in 72-hour moisture with lightweight hyaluronic acid and aloe vera.</p>
+          </div>
+          <a href="#featured-products" class="text-[11px] font-bold tracking-wider text-teal-700 hover:text-teal-900 flex items-center space-x-1 uppercase pt-2 border-t border-slate-100">
+            <span>Shop Step</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold font-playfair text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full">Step 05</span>
+              <span class="text-slate-400 text-xs uppercase font-bold">Protect</span>
+            </div>
+            <div class="w-full aspect-square bg-[#f1f8f5] rounded-xl overflow-hidden mb-4 flex items-center justify-center p-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJDUNyiqhoYH4fLrSG_VlyHbhUVR8xp4w3cb6lMdj6GV5F1iLP1UnQ_8pUwl0sdJ8Xp2R8T6lMVmVE-A1dMN7w8zQpgti7apxbq1BrgXLi8-yC9022Q4KLSb8YXboB_51Ih344xqkuGQKViWqDNe5AsvLnt0f3Y_kpIOaiqGd8e1h-4bjoCR70VlemWmUA5Y5Mp4zqYHCSGvnRA9lrMwuT3QVID5d1h9xXGF3ek82L_OgqeGJQ-iFInw" alt="Protect" class="max-h-28 object-contain" />
+            </div>
+            <h3 class="font-playfair font-bold text-base text-slate-900 mb-1.5">Daily UV Shield SPF 50</h3>
+            <p class="text-xs text-slate-500 leading-relaxed mb-4">Broad-spectrum mineral UVA/UVB shield without white cast or pore-clogging grease.</p>
+          </div>
+          <a href="#featured-products" class="text-[11px] font-bold tracking-wider text-teal-700 hover:text-teal-900 flex items-center space-x-1 uppercase pt-2 border-t border-slate-100">
+            <span>Shop Step</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- END: SkincareRoutineSection -->
 
     <!-- BEGIN: FeaturedProductsSection -->
     <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="featured-products-grid" id="featured-products">
@@ -296,7 +390,7 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Product 1: Best Seller -->
+        <!-- Product 1 -->
         <article class="product-card group" data-product-id="101">
           <div>
             <div class="product-card__image-box">
@@ -307,11 +401,7 @@
               <a href="#">Hydra Glow<br/>Gel Cream</a>
             </h3>
             <div class="product-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <span class="product-card__reviews-count">(245)</span>
             </div>
             <div class="product-card__price-row">
@@ -329,7 +419,7 @@
           </div>
         </article>
 
-        <!-- Product 2: New -->
+        <!-- Product 2 -->
         <article class="product-card group" data-product-id="102">
           <div>
             <div class="product-card__image-box">
@@ -340,11 +430,7 @@
               <a href="#">Radiance Boost<br/>Serum</a>
             </h3>
             <div class="product-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <span class="product-card__reviews-count">(189)</span>
             </div>
             <div class="product-card__price-row">
@@ -362,7 +448,7 @@
           </div>
         </article>
 
-        <!-- Product 3: Limited -->
+        <!-- Product 3 -->
         <article class="product-card group" data-product-id="103">
           <div>
             <div class="product-card__image-box">
@@ -373,11 +459,7 @@
               <a href="#">Nourishing Night<br/>Restorative Cream</a>
             </h3>
             <div class="product-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <span class="product-card__reviews-count">(312)</span>
             </div>
             <div class="product-card__price-row">
@@ -395,7 +477,7 @@
           </div>
         </article>
 
-        <!-- Product 4: Sale -->
+        <!-- Product 4 -->
         <article class="product-card group" data-product-id="104">
           <div>
             <div class="product-card__image-box">
@@ -406,11 +488,7 @@
               <a href="#">Daily UV Defense<br/>Sunscreen <span class="text-teal-700 font-bold">SPF 50</span></a>
             </h3>
             <div class="product-card__rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
               <span class="product-card__reviews-count">(156)</span>
             </div>
             <div class="product-card__price-row">
@@ -432,16 +510,123 @@
     </section>
     <!-- END: FeaturedProductsSection -->
 
+    <!-- BEGIN: CustomerReviewsSection -->
+    <section class="py-16 bg-[#eef7f4]/60 border-y border-teal-900/10" data-purpose="customer-reviews-section" id="reviews">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center space-x-1.5 text-amber-400 text-sm mb-2">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span class="text-slate-700 text-xs font-bold ml-1">4.9 / 5.0</span>
+          </div>
+          <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+            Loved by 10,000+ Radiant Faces
+          </h2>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Real skin transformations from everyday customers who discovered clean botanical care.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                  <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+                </span>
+              </div>
+              <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"My skin has never felt this hydrated"</h4>
+              <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                "The Hydra Glow cream absorbs like water and keeps my dry patches completely gone all day. Zero sticky residue under makeup!"
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <div class="font-bold text-xs text-slate-800">Sarah M.</div>
+              <div class="text-[11px] text-slate-400">Dry & Sensitive Skin</div>
+              <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Hydra Glow Gel Cream</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                  <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+                </span>
+              </div>
+              <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"Noticeable glow in just 10 days"</h4>
+              <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                "I was skeptical about organic serums, but the Radiance Boost cleared my dull complexion completely. People keep asking what I'm using."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <div class="font-bold text-xs text-slate-800">Ayesha K.</div>
+              <div class="text-[11px] text-slate-400">Combination Skin</div>
+              <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Radiance Boost Serum</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                  <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+                </span>
+              </div>
+              <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"Finally an SPF that doesn't break me out!"</h4>
+              <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                "Every mineral sunscreen usually leaves a chalky white ghost face. This one sinks right in and gives a dewy finish without clogged pores."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <div class="font-bold text-xs text-slate-800">Emily R.</div>
+              <div class="text-[11px] text-slate-400">Acne-Prone Skin</div>
+              <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Daily UV Defense SPF 50</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                  <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+                </span>
+              </div>
+              <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"Woke up with plump, bouncy skin"</h4>
+              <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                "The Nourishing Night Restorative cream smells so calming and luxurious. My fine lines around the mouth looked visibly softened by morning."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <div class="font-bold text-xs text-slate-800">Zoya N.</div>
+              <div class="text-[11px] text-slate-400">Mature Skin</div>
+              <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Nourishing Night Cream</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: CustomerReviewsSection -->
+
     <!-- BEGIN: PromotionalBannerSection -->
     <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="promo-club-banner">
       <div class="bg-[#0b3c39] rounded-3xl overflow-hidden text-white shadow-xl grid grid-cols-1 lg:grid-cols-12 items-center">
-        <!-- Left Product Showcase Image -->
         <div class="lg:col-span-4 h-64 lg:h-full relative min-h-[220px]">
           <img alt="Skincare serums and cream jars on stone display" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBprMJtnc9JxdqI-Rj4awdfyJuB1byrdqdmh4X75KeGCX8Xzv8uSZQUH7S-8npqWlUFcE3C0EnkFQVUA41chryu941sPvkkKfTpKbUPykGUDLPyH-P4KLHJY-r55pEpXrke6yK85ZQgOzSgd5EfYlSzpl5duGolETzCAoYKryt8duP_wFDZi_UaEqyMSxGx84-dtpBVCUTfYjFZGzpgQ4R0dcpGVUlNuuXDgGM4VBficLfY0qYw5jxn8w"/>
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#0b3c39]/30 to-[#0b3c39]"></div>
         </div>
         
-        <!-- Middle: Promo Headline -->
         <div class="lg:col-span-5 p-6 sm:p-10 space-y-2">
           <span class="text-[11px] font-bold tracking-[0.25em] text-teal-300 uppercase">Special Offer</span>
           <h2 class="font-playfair text-3xl sm:text-4xl font-normal leading-tight">
@@ -452,7 +637,6 @@
           </p>
         </div>
 
-        <!-- Right: Newsletter Signup Form Box -->
         <div class="lg:col-span-3 p-6 sm:p-8 bg-[#08302e] lg:h-full flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-teal-800/50">
           <div class="flex items-center space-x-3 mb-3">
             <div class="w-8 h-8 rounded-full bg-[#114b47] flex items-center justify-center text-teal-300 text-sm">
@@ -474,10 +658,88 @@
     </section>
     <!-- END: PromotionalBannerSection -->
 
+    <!-- BEGIN: FAQSection -->
+    <section class="py-16 max-w-4xl mx-auto px-4 sm:px-8" data-purpose="faq-section" id="faq">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <div class="inline-flex items-center space-x-2 text-teal-700 bg-teal-50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-circle-question text-teal-600"></i>
+          <span>Got Questions?</span>
+        </div>
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-sm text-slate-500 leading-relaxed">
+          Everything you need to know about our botanical formulas, shipping, and guarantees.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30" open>
+          <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+            <span>Are Glowérive formulas safe for sensitive skin?</span>
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+            Yes! Every single product is dermatologist-tested, hypoallergenic, and formulated without synthetic fragrances, drying alcohols, parabens, or sulfates. We specifically formulate for reactive and sensitive skin barriers.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+          <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+            <span>How fast is shipping and is it free?</span>
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+            We offer <strong>Free Express Shipping</strong> on all orders over $50. Orders are dispatched within 24-48 hours and typically arrive within 3 to 5 business days with full tracking information provided.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+          <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+            <span>Are your products 100% cruelty-free and vegan?</span>
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+            Absolutely. We never test on animals at any stage of production, and all raw ingredients are sustainably wildcrafted or organic plant-derived with Leaping Bunny certification standards.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+          <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+            <span>In what order should I apply the products?</span>
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+            Always apply from thinnest to thickest texture: Cleanser ➡️ Toner ➡️ Serum (Radiance Boost) ➡️ Moisturizer (Hydra Glow Gel Cream) ➡️ Daily UV Sunscreen (morning) or Night Cream (evening).
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+          <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+            <span>What is your 30-Day Money-Back Guarantee?</span>
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+            If you don’t notice a real improvement in your skin’s texture and radiance within 30 days, simply contact our support team for a hassle-free full refund. No questions asked.
+          </div>
+        </details>
+      </div>
+    </section>
+    <!-- END: FAQSection -->
+
     <!-- BEGIN: TrustBadgesFooterSection -->
     <section class="border-t border-slate-200/80 bg-white py-8 mt-6" data-purpose="trust-badges">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- Trust 1: Free Shipping -->
         <div class="flex items-center space-x-3">
           <div class="text-[#0e4643] text-2xl">
             <i class="fa-solid fa-truck"></i>
@@ -488,7 +750,6 @@
           </div>
         </div>
 
-        <!-- Trust 2: Secure Payment -->
         <div class="flex items-center space-x-3">
           <div class="text-[#0e4643] text-2xl">
             <i class="fa-solid fa-shield-halved"></i>
@@ -499,7 +760,6 @@
           </div>
         </div>
 
-        <!-- Trust 3: Easy Returns -->
         <div class="flex items-center space-x-3">
           <div class="text-[#0e4643] text-2xl">
             <i class="fa-solid fa-arrows-rotate"></i>
@@ -510,7 +770,6 @@
           </div>
         </div>
 
-        <!-- Trust 4: Customer Support -->
         <div class="flex items-center space-x-3">
           <div class="text-[#0e4643] text-2xl">
             <i class="fa-solid fa-headset"></i>
@@ -566,9 +825,7 @@
       </div>
     </div>
 
-    <div id="cart-items-container" class="cart-drawer__body">
-      <!-- Populated by theme.js -->
-    </div>
+    <div id="cart-items-container" class="cart-drawer__body"></div>
 
     <div class="cart-drawer__footer">
       <div class="cart-subtotal-row">
@@ -616,11 +873,11 @@
     <div class="p-6 space-y-4">
       <nav class="flex flex-col space-y-4 text-sm font-semibold tracking-wider text-slate-800">
         <a href="#" class="text-[#0e4643] border-b pb-2">HOME</a>
+        <a href="#routine" class="hover:text-[#0e4643] border-b pb-2">ROUTINE</a>
         <a href="#featured-products" class="hover:text-[#0e4643] border-b pb-2">SHOP</a>
         <a href="#shop" class="hover:text-[#0e4643] border-b pb-2">COLLECTIONS</a>
-        <a href="#ingredients" class="hover:text-[#0e4643] border-b pb-2">INGREDIENTS</a>
-        <a href="#about" class="hover:text-[#0e4643] border-b pb-2">ABOUT US</a>
-        <a href="#blog" class="hover:text-[#0e4643] border-b pb-2">BLOG</a>
+        <a href="#reviews" class="hover:text-[#0e4643] border-b pb-2">REVIEWS</a>
+        <a href="#faq" class="hover:text-[#0e4643] border-b pb-2">FAQ</a>
       </nav>
     </div>
   </div>

@@ -1,0 +1,209 @@
+<!-- Customer Reviews & Testimonials Section -->
+<section class="py-16 bg-[#eef7f4]/60 border-y border-teal-900/10" data-purpose="customer-reviews-section" id="reviews">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <!-- Overall rating stars -->
+      <div class="inline-flex items-center space-x-1.5 text-amber-400 text-sm mb-2">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <span class="text-slate-700 text-xs font-bold ml-1">4.9 / 5.0</span>
+      </div>
+      <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+        {{ section.settings.heading | default: 'Loved by 10,000+ Radiant Faces' }}
+      </h2>
+      <p class="text-sm text-slate-500 leading-relaxed">
+        {{ section.settings.subheading | default: 'Real skin transformations from everyday customers who discovered clean botanical care.' }}
+      </p>
+    </div>
+
+    <!-- Review Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between" {{ block.shopify_attributes }}>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-400 text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                  <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+                </span>
+              </div>
+              <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">
+                "{{ block.settings.headline }}"
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                "{{ block.settings.quote }}"
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100">
+              <div class="font-bold text-xs text-slate-800">{{ block.settings.author }}</div>
+              <div class="text-[11px] text-slate-400">{{ block.settings.skin_type }}</div>
+              <div class="text-[10px] text-teal-700 font-semibold mt-1">{{ block.settings.product }}</div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Default 4 Reviews -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+              </span>
+            </div>
+            <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"My skin has never felt this hydrated"</h4>
+            <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+              "The Hydra Glow cream absorbs like water and keeps my dry patches completely gone all day. Zero sticky residue under makeup!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="font-bold text-xs text-slate-800">Sarah M.</div>
+            <div class="text-[11px] text-slate-400">Dry & Sensitive Skin</div>
+            <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Hydra Glow Gel Cream</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+              </span>
+            </div>
+            <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"Noticeable glow in just 10 days"</h4>
+            <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+              "I was skeptical about organic serums, but the Radiance Boost cleared my dull complexion completely. People keep asking what I'm using."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="font-bold text-xs text-slate-800">Ayesha K.</div>
+            <div class="text-[11px] text-slate-400">Combination Skin</div>
+            <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Radiance Boost Serum</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+              </span>
+            </div>
+            <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"Finally an SPF that doesn't break me out!"</h4>
+            <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+              "Every mineral sunscreen usually leaves a chalky white ghost face. This one sinks right in and gives a dewy finish without clogged pores."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="font-bold text-xs text-slate-800">Emily R.</div>
+            <div class="text-[11px] text-slate-400">Acne-Prone Skin</div>
+            <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Daily UV Defense SPF 50</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="inline-flex items-center text-[10px] text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full font-semibold">
+                <i class="fa-solid fa-circle-check text-[9px] mr-1 text-teal-600"></i> Verified
+              </span>
+            </div>
+            <h4 class="font-playfair font-bold text-sm text-slate-900 mb-2">"Woke up with plump, bouncy skin"</h4>
+            <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+              "The Nourishing Night Restorative cream smells so calming and luxurious. My fine lines around the mouth looked visibly softened by morning."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="font-bold text-xs text-slate-800">Zoya N.</div>
+            <div class="text-[11px] text-slate-400">Mature Skin</div>
+            <div class="text-[10px] text-teal-700 font-semibold mt-1">Purchased: Nourishing Night Cream</div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Customer Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Loved by 10,000+ Radiant Faces"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Real skin transformations from everyday customers who discovered clean botanical care."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "headline",
+          "label": "Review Headline",
+          "default": "My skin has never felt this hydrated"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Review Quote",
+          "default": "Absorbs like water and keeps my dry patches gone all day."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Customer Name",
+          "default": "Sarah M."
+        },
+        {
+          "type": "text",
+          "id": "skin_type",
+          "label": "Skin Type",
+          "default": "Dry & Sensitive Skin"
+        },
+        {
+          "type": "text",
+          "id": "product",
+          "label": "Product Purchased",
+          "default": "Purchased: Hydra Glow Gel Cream"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer Reviews"
+    }
+  ]
+}
+{% endschema %}

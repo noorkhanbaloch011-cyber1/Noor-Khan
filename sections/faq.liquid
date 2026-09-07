@@ -1,0 +1,145 @@
+<!-- Skincare FAQ Accordion Section -->
+<section class="py-16 max-w-4xl mx-auto px-4 sm:px-8" data-purpose="faq-section" id="faq">
+  <div class="text-center max-w-xl mx-auto mb-10">
+    <div class="inline-flex items-center space-x-2 text-teal-700 bg-teal-50 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+      <i class="fa-solid fa-circle-question text-teal-600"></i>
+      <span>{{ section.settings.eyebrow | default: 'Got Questions?' }}</span>
+    </div>
+    <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0e4643] mb-3">
+      {{ section.settings.heading | default: 'Frequently Asked Questions' }}
+    </h2>
+    <p class="text-sm text-slate-500 leading-relaxed">
+      {{ section.settings.subheading | default: 'Everything you need to know about our botanical formulas, shipping, and guarantees.' }}
+    </p>
+  </div>
+
+  <div class="space-y-4">
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+        <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30" {{ block.shopify_attributes }}>
+          <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+            <span>{{ block.settings.question }}</span>
+            <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+            {{ block.settings.answer }}
+          </div>
+        </details>
+      {%- endfor -%}
+    {%- else -%}
+      <!-- Default 5 Skincare FAQs -->
+      <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30" open>
+        <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+          <span>Are Glowérive formulas safe for sensitive skin?</span>
+          <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </summary>
+        <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+          Yes! Every single product is dermatologist-tested, hypoallergenic, and formulated without synthetic fragrances, drying alcohols, parabens, or sulfates. We specifically formulate for reactive and sensitive skin barriers.
+        </div>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+        <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+          <span>How fast is shipping and is it free?</span>
+          <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </summary>
+        <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+          We offer <strong>Free Express Shipping</strong> on all orders over $50. Orders are dispatched within 24-48 hours and typically arrive within 3 to 5 business days with full tracking information provided.
+        </div>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+        <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+          <span>Are your products 100% cruelty-free and vegan?</span>
+          <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </summary>
+        <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+          Absolutely. We never test on animals at any stage of production, and all raw ingredients are sustainably wildcrafted or organic plant-derived with Leaping Bunny certification standards.
+        </div>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+        <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+          <span>In what order should I apply the products?</span>
+          <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </summary>
+        <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+          Always apply from thinnest to thickest texture: Cleanser ➡️ Toner ➡️ Serum (Radiance Boost) ➡️ Moisturizer (Hydra Glow Gel Cream) ➡️ Daily UV Sunscreen (morning) or Night Cream (evening).
+        </div>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm transition-all open:shadow-md open:border-teal-700/30">
+        <summary class="flex items-center justify-between font-playfair font-semibold text-slate-900 text-base cursor-pointer list-none select-none">
+          <span>What is your 30-Day Money-Back Guarantee?</span>
+          <span class="w-7 h-7 rounded-full bg-teal-50 text-[#0e4643] flex items-center justify-center text-xs transition-transform group-open:rotate-180 group-open:bg-[#0e4643] group-open:text-white">
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </summary>
+        <div class="pt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+          If you don’t notice a real improvement in your skin’s texture and radiance within 30 days, simply contact our support team for a hassle-free full refund. No questions asked.
+        </div>
+      </details>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Got Questions?"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Everything you need to know about our botanical formulas, shipping, and guarantees."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Are Glowérive formulas safe for sensitive skin?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Yes! Every single product is dermatologist-tested and hypoallergenic."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion"
+    }
+  ]
+}
+{% endschema %}

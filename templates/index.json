@@ -111,12 +111,27 @@
         "heading": "Shop by Category"
       }
     },
+    "skincare_routine": {
+      "type": "skincare-routine",
+      "settings": {
+        "eyebrow": "Your Daily Ritual",
+        "heading": "The 5-Step Glow Routine",
+        "subheading": "Carefully curated botanical steps designed to work in synergy for deep cellular hydration and radiant glow."
+      }
+    },
     "featured_products": {
       "type": "featured-products",
       "settings": {
         "heading": "Featured Products",
         "products_to_show": 4,
         "view_all_link": "#featured-products"
+      }
+    },
+    "customer_reviews": {
+      "type": "customer-reviews",
+      "settings": {
+        "heading": "Loved by 10,000+ Radiant Faces",
+        "subheading": "Real skin transformations from everyday customers who discovered clean botanical care."
       }
     },
     "promo_banner": {
@@ -127,6 +142,14 @@
         "subtitle": "Join our glow club & unlock exclusive offers and skincare tips.",
         "form_title": "Join Now",
         "form_text": "Be the first to know about new arrivals & exclusive deals."
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "eyebrow": "Got Questions?",
+        "heading": "Frequently Asked Questions",
+        "subheading": "Everything you need to know about our botanical formulas, shipping, and guarantees."
       }
     },
     "trust_badges": {
@@ -147,8 +170,11 @@
     "hero_banner",
     "value_props",
     "category_grid",
+    "skincare_routine",
     "featured_products",
+    "customer_reviews",
     "promo_banner",
+    "faq",
     "trust_badges"
   ]
 }
