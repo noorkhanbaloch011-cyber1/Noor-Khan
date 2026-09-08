@@ -17,8 +17,18 @@
           <div class="category-img-container">
             {%- if block.settings.image != blank -%}
               <img src="{{ block.settings.image | image_url: width: 300 }}" alt="{{ block.settings.title | escape }}" loading="lazy" />
+            {%- elsif block.settings.fallback_asset != blank -%}
+              <img src="{{ block.settings.fallback_asset | asset_url }}" alt="{{ block.settings.title | escape }}" loading="lazy" />
             {%- else -%}
-              <img src="{{ block.settings.fallback_image_url }}" alt="{{ block.settings.title | escape }}" loading="lazy" />
+              {%- case forloop.index -%}
+                {%- when 1 -%}<img src="{{ 'category-serums.jpg' | asset_url }}" alt="Serums" loading="lazy" />
+                {%- when 2 -%}<img src="{{ 'category-moisturizers.jpg' | asset_url }}" alt="Moisturizers" loading="lazy" />
+                {%- when 3 -%}<img src="{{ 'category-cleansers.jpg' | asset_url }}" alt="Cleansers" loading="lazy" />
+                {%- when 4 -%}<img src="{{ 'category-toners.jpg' | asset_url }}" alt="Toners" loading="lazy" />
+                {%- when 5 -%}<img src="{{ 'category-eyecare.jpg' | asset_url }}" alt="Eye Care" loading="lazy" />
+                {%- when 6 -%}<img src="{{ 'category-suncare.jpg' | asset_url }}" alt="Sun Care" loading="lazy" />
+                {%- else -%}<img src="{{ 'category-serums.jpg' | asset_url }}" alt="Category" loading="lazy" />
+              {%- endcase -%}
             {%- endif -%}
           </div>
           <h3 class="category-title">{{ block.settings.title }}</h3>
@@ -29,7 +39,7 @@
       <!-- Default 6 Categories -->
       <a class="group category-ring flex flex-col items-center" href="#category-serums">
         <div class="category-img-container">
-          <img alt="Serums" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWiL9l1lYUyGNWQiHoox8caFjvCDsNS80Fq574H1GqyUPcqlkdsvv2I6Ch_Gm5mDxywgEbXhtAVAd8sQQthSRqrMIDl5B2hA3Q6CS9oBC_KOhCORxu3pwkDaw_zh9Sp8MwjdTiYHr0nsiTVzxCbS8NzBwiRcVojZ-YL_K7tVYGlX16x1kkP4UsRVVhaqidMK1puUZTcSab4c-uR5CkA4Xt6IyyZgSZQvzeTjvKFYva0IYQUiy2fL3lw" loading="lazy" />
+          <img alt="Serums" src="{{ 'category-serums.jpg' | asset_url }}" loading="lazy" />
         </div>
         <h3 class="category-title">Serums</h3>
         <span class="category-subtitle">Explore</span>
@@ -37,7 +47,7 @@
 
       <a class="group category-ring flex flex-col items-center" href="#category-moisturizers">
         <div class="category-img-container">
-          <img alt="Moisturizers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6DuL_vNcZjV6655Xtf6PQ49rJae0easENf8pl7ErOaLoB6VAemQ7aTmE-DbW8DoxPSxcRA7X1sY3q8naPSq2DxnxKE648Um50WkeSQwrq2o-4p6gb3LRxebrQ6taYJJ8QfTByH5R9kwlTZXXMUTvOF6-8VWCu5TgQz8Ieo-UjJy_LFIGmP6Q0Vs1TkArSLyHdFL1JUn9PtD7Gilssd77Or1NOALyBpvAxr8HY9kx7o_AVKUIS2sxH9A" loading="lazy" />
+          <img alt="Moisturizers" src="{{ 'category-moisturizers.jpg' | asset_url }}" loading="lazy" />
         </div>
         <h3 class="category-title">Moisturizers</h3>
         <span class="category-subtitle">Explore</span>
@@ -45,7 +55,7 @@
 
       <a class="group category-ring flex flex-col items-center" href="#category-cleansers">
         <div class="category-img-container">
-          <img alt="Cleansers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Q6EKwGCCBoGf_M7w3DScThFyTCQ4BiltZETVjuBeOw8INfyeXE5DGpWGS-16BVFQzNaBEJYhWnwY-3mf-uPV-E0MLfAw79rpdwzpuUJg8zhOCsBGXKjpHT22sD7gjsZqK1gOD-Iy-pp0ehOPZpHGk0-NBZOF9dqORRNx0vIgLdqn5XV2RDELUtA69sGcEqhmV9HnJ6eNf8824FsYT1o8hZvtHMFVIE41UAmWPoKn-KsxzhIr3GpX4A" loading="lazy" />
+          <img alt="Cleansers" src="{{ 'category-cleansers.jpg' | asset_url }}" loading="lazy" />
         </div>
         <h3 class="category-title">Cleansers</h3>
         <span class="category-subtitle">Explore</span>
@@ -53,7 +63,7 @@
 
       <a class="group category-ring flex flex-col items-center" href="#category-toners">
         <div class="category-img-container">
-          <img alt="Toners" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3fw8c2SWUYJWL_h6uIKWE61-ZODfH2vb42M1qswdXs4kLjX0glNR4qeyPRs-CVoFFV_N8VPkGBhksQL-CFNCikcPctr9ekOwFU95Oq5QngbwPxBUJqPumDrYgP7DNwp5qRxEPDUnV40NQmc804yL-xptbxZbZl_CSX6D0AL1sitrOyE7Eo7u_tombpR_T2HDyJ8EEdT5RAS0IKgEm7tnzw5LnqHaAJwbnHv1ohue34WONGiJotnQZg" loading="lazy" />
+          <img alt="Toners" src="{{ 'category-toners.jpg' | asset_url }}" loading="lazy" />
         </div>
         <h3 class="category-title">Toners</h3>
         <span class="category-subtitle">Explore</span>
@@ -61,7 +71,7 @@
 
       <a class="group category-ring flex flex-col items-center" href="#category-eyecare">
         <div class="category-img-container">
-          <img alt="Eye Care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDJN2wVdLq7SQpihPuTuZzrwKPFltF4dOigoKJwo3cagyQuUqVCPeK6WzzR3uGRIUIHyF75KQL_TJOOX4_cjbIt9Mp_CYPhRtO-oGKD_-7xEcfT1r_oantBo7ATtBYg5JC6DIDURcVr5TH95cYMgIYW_sZcGeMRdDBcSuNHjwMXpdFF6hKe9yV1CEvuAE91u15DeQvxOsnlnH4hj8SSL_uLXkPcqghdmP8PeOEVEAhw1EcU2eMmYwOhA" loading="lazy" />
+          <img alt="Eye Care" src="{{ 'category-eyecare.jpg' | asset_url }}" loading="lazy" />
         </div>
         <h3 class="category-title">Eye Care</h3>
         <span class="category-subtitle">Explore</span>
@@ -69,7 +79,7 @@
 
       <a class="group category-ring flex flex-col items-center" href="#category-suncare">
         <div class="category-img-container">
-          <img alt="Sun Care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkqsQuUhoM_laI0u51NEEY2QTpfUKH7nxGuUcVAOPvBImBTpl5Jg0wh1OGj3PcLfVJ5fVOzZgTjaTUenUyGaZQi_RP7tt6025GEtIMZO3ScWgzaawIzMM25FeWYu-E2O6-rswdBWXz0YeCsbsKG5LX28oYK6vBWF9HOCeLFe1jZhpaE8BvZN05J962AqDraD2Pk3nVQ-zDhfpJQmS2nCAtRokav-x1_UyRzY1wJGGaIOLXHrtU9tqMxw" loading="lazy" />
+          <img alt="Sun Care" src="{{ 'category-suncare.jpg' | asset_url }}" loading="lazy" />
         </div>
         <h3 class="category-title">Sun Care</h3>
         <span class="category-subtitle">Explore</span>

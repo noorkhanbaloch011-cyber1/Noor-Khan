@@ -6,7 +6,7 @@
       {%- if section.settings.image != blank -%}
         <img alt="{{ section.settings.image.alt | default: 'Skincare serums and cream jars' | escape }}" class="w-full h-full object-cover" src="{{ section.settings.image | image_url: width: 800 }}" loading="lazy" />
       {%- else -%}
-        <img alt="Skincare serums and cream jars on stone display" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBprMJtnc9JxdqI-Rj4awdfyJuB1byrdqdmh4X75KeGCX8Xzv8uSZQUH7S-8npqWlUFcE3C0EnkFQVUA41chryu941sPvkkKfTpKbUPykGUDLPyH-P4KLHJY-r55pEpXrke6yK85ZQgOzSgd5EfYlSzpl5duGolETzCAoYKryt8duP_wFDZi_UaEqyMSxGx84-dtpBVCUTfYjFZGzpgQ4R0dcpGVUlNuuXDgGM4VBficLfY0qYw5jxn8w" loading="lazy" />
+        <img alt="Skincare serums and cream jars on stone display" class="w-full h-full object-cover" src="{{ 'promo-banner.jpg' | asset_url }}" loading="lazy" />
       {%- endif -%}
       <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#0b3c39]/30 to-[#0b3c39]"></div>
     </div>

@@ -42,26 +42,24 @@
 
     <!-- Hero Skincare Model Image -->
     <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
-      <div class="relative w-full max-w-lg">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20">
-          {%- if section.settings.hero_image != blank -%}
-            <img 
-              alt="{{ section.settings.hero_image.alt | default: 'Radiant botanical skincare model' | escape }}" 
-              class="w-full h-[480px] sm:h-[560px] object-cover object-center" 
-              src="{{ section.settings.hero_image | image_url: width: 1200 }}" 
-              loading="eager"
-            />
-          {%- else -%}
-            <img 
-              alt="Radiant Asian skincare model with glowing dewy skin, green leaves and water splash" 
-              class="w-full h-[480px] sm:h-[560px] object-cover object-center" 
-              src="{{ 'hero-model.jpg' | asset_url }}" 
-              loading="eager"
-            />
-          {%- endif -%}
-          <!-- Ambient mint leaf accent overlay -->
-          <div class="absolute -bottom-8 -left-8 w-36 h-36 bg-teal-300/30 rounded-full blur-2xl pointer-events-none"></div>
-        </div>
+      <div class="relative w-full max-w-xl flex items-end justify-center lg:justify-end">
+        {%- if section.settings.hero_image != blank -%}
+          <img 
+            alt="{{ section.settings.hero_image.alt | default: 'Radiant botanical skincare model' | escape }}" 
+            class="w-full max-h-[560px] object-contain object-bottom drop-shadow-2xl" 
+            src="{{ section.settings.hero_image | image_url: width: 1200 }}" 
+            loading="eager"
+          />
+        {%- else -%}
+          <img 
+            alt="Radiant Asian skincare model with glowing dewy skin, green leaves and water splash" 
+            class="w-full max-h-[560px] object-contain object-bottom drop-shadow-2xl" 
+            src="{{ 'hero-model.jpg' | asset_url }}" 
+            loading="eager"
+          />
+        {%- endif -%}
+        <!-- Ambient mint glow accent overlay -->
+        <div class="absolute -bottom-6 right-10 w-48 h-48 bg-teal-200/20 rounded-full blur-3xl pointer-events-none"></div>
       </div>
     </div>
   </div>

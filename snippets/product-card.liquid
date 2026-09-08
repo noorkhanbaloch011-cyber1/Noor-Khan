@@ -15,11 +15,21 @@
   assign card_title = product.title | default: title | default: 'Hydra Glow Gel Cream'
   assign card_price = product.price | default: price | default: 3400
   assign card_compare = product.compare_at_price | default: compare_price
-  assign card_image = product.featured_image | image_url: width: 600 | default: image_url
   assign card_id = product.selected_or_first_available_variant.id | default: product.id | default: 101
   assign card_badge = badge_text
   if product and product.compare_at_price > product.price
     assign card_badge = 'Sale'
+  endif
+
+  assign card_image = ''
+  if product.featured_image != blank
+    assign card_image = product.featured_image | image_url: width: 600
+  elsif image_asset != blank
+    assign card_image = image_asset | asset_url
+  elsif image_url != blank
+    assign card_image = image_url
+  else
+    assign card_image = 'product-1.jpg' | asset_url
   endif
 -%}
 

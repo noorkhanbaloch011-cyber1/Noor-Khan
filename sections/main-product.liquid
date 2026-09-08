@@ -1,4 +1,4 @@
-﻿<!-- Main Product Section -->
+<!-- Main Product Section -->
 <section class="py-12 max-w-7xl mx-auto px-4 sm:px-8" data-purpose="main-product">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
     <!-- Product Gallery -->
@@ -6,7 +6,7 @@
       {%- if product.featured_image != blank -%}
         <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title | escape }}" class="max-h-[480px] object-contain" />
       {%- else -%}
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA" alt="Product Image" class="max-h-[480px] object-contain" />
+        <img src="{{ 'product-1.jpg' | asset_url }}" alt="Hydra Glow Gel Cream" class="max-h-[480px] object-contain" />
       {%- endif -%}
     </div>
 

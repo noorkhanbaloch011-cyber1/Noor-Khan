@@ -18,14 +18,14 @@
         title: "Hydra Glow Gel Cream",
         price: 3400,
         quantity: 1,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAya4Y_P-pzss-8PZxecx_vaMGnbkwTUo3vpD8j_MyBASTQjzcC6yrEF_Jw174M1jdXZtmGmke0ACoDtjSiDw1PJ1X6UiH1fLDmGGOvqcvFDsezrlBk-lMserZotyjF7Mr7ACh1nsXTGzjzksoZD4im-VYNf_U8nGSrxYvzG53cgx04z4KHYmcDI-f68pjFoHlmGCExI5n2zPOchfx00hijCSGLGxldHreXr_pebIhxK2n--Baa1FuhnA"
+        image: "product-1.jpg"
       },
       {
         id: 102,
         title: "Radiance Boost Serum",
         price: 4200,
         quantity: 1,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDa5aB2COJAeOvOLGaZOry1CD5mRizrITc_qdwIGqDU-C6qec2dGL46k-CRKXWx9qRaAY93KhXeISPD5OrVZ7byUp_KUFHW5Q6EJmeyR1UmlIL_cfDjDcSMby568yeJXfy3DGKr8zVEVXn7vhPgwx_hr_nGYiHD8Kg4lG9ULWbmy1ed009fgTjeziwtSIkBezbCnE176ZGDTdzjcU0DYb0lJO9MwW7HnsUD8GsHqOgAywTrOF6WaNkvDQ"
+        image: "product-2.jpg"
       }
     ]
   };
