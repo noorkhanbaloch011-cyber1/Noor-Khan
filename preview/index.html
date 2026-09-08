@@ -115,27 +115,40 @@
   <!-- END: MainHeader -->
 
   <main>
-    <!-- BEGIN: HeroSection -->
-    <section class="relative bg-gradient-to-r from-[#297270] via-[#439592] to-[#60b3ad] text-white overflow-hidden pb-16 md:pb-24" data-purpose="hero-banner">
+    <!-- BEGIN: HeroSection (Unified Seamless Canvas matching Image 2) -->
+    <section 
+      class="relative text-white overflow-hidden pb-16 md:pb-24 hero-banner-unified" 
+      data-purpose="hero-banner"
+      style="background-image: url('../assets/hero-banner-clean-desktop.jpg'); background-size: cover; background-position: right center; background-repeat: no-repeat; background-color: #317b79;"
+    >
       <div class="absolute inset-0 glow-overlay pointer-events-none"></div>
       
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 md:py-20 lg:py-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-6 space-y-6 text-left">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-14 sm:py-20 md:py-24 lg:py-28 relative z-10 min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] flex items-center">
+        <div class="w-full max-w-lg lg:max-w-xl space-y-5 sm:space-y-6 text-left">
           <div class="inline-flex items-center space-x-2 text-teal-100 tracking-[0.25em] text-xs font-bold uppercase">
             <i class="fa-solid fa-leaf text-teal-200"></i>
             <span>Naturally Radiant</span>
           </div>
-          <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.15] text-white">
+
+          <h1 class="font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.12] text-white drop-shadow-sm">
             Skincare <br/>
             that cares, <br/>
             beauty that <br/>
             <span class="italic font-playfair font-medium text-teal-100">shines.</span>
           </h1>
-          <p class="text-teal-50/90 text-sm sm:text-base max-w-md font-light leading-relaxed">
+
+          <!-- Delicate decorative flourish -->
+          <div class="flex items-center space-x-3 text-teal-200/60 max-w-xs pt-1">
+            <span class="h-[1px] w-10 bg-teal-200/40"></span>
+            <i class="fa-solid fa-seedling text-xs"></i>
+            <span class="h-[1px] w-10 bg-teal-200/40"></span>
+          </div>
+
+          <p class="text-teal-50/90 text-xs sm:text-sm lg:text-base max-w-sm sm:max-w-md font-light leading-relaxed">
             Discover the perfect blend of nature and science for healthy, glowing skin every day.
           </p>
 
-          <div class="pt-4 flex flex-wrap items-center gap-4">
+          <div class="pt-3 flex flex-wrap items-center gap-4">
             <a class="inline-flex items-center space-x-3 bg-[#146868] hover:bg-[#095855] text-white px-7 py-3.5 rounded-full font-semibold text-xs tracking-wider uppercase border border-white/20 shadow-lg hover:shadow-teal-900/40 transition-all-custom" href="#featured-products">
               <span>Shop Now</span>
               <i class="fa-solid fa-arrow-right-long text-sm"></i>
@@ -146,14 +159,6 @@
               </span>
               <span>Watch Video</span>
             </button>
-          </div>
-        </div>
-
-        <!-- High-Fashion Asian Skincare Model Image -->
-        <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
-          <div class="relative w-full max-w-xl flex items-end justify-center lg:justify-end">
-            <img alt="Radiant Asian skincare model with glowing dewy skin, green leaves and water splash" class="w-full max-h-[560px] object-contain object-bottom drop-shadow-2xl" src="../assets/hero-model.jpg"/>
-            <div class="absolute -bottom-6 right-10 w-48 h-48 bg-teal-200/20 rounded-full blur-3xl pointer-events-none"></div>
           </div>
         </div>
       </div>
